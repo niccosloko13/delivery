@@ -5,18 +5,37 @@ import path from "node:path";
 import { defaultRestaurantSettings } from "./defaults";
 import type { RestaurantSettings } from "@/types/settings";
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const SETTINGS_PATH = path.join(DATA_DIR, "restaurant-settings.json");
-const ORDERS_PATH = path.join(DATA_DIR, "orders.json");
+const SOURCE_DATA_DIR = path.join(process.cwd(), "data");
+const RUNTIME_DATA_DIR = process.env.VERCEL ? path.join("/tmp", "delivery-data") : SOURCE_DATA_DIR;
+const SETTINGS_PATH = path.join(RUNTIME_DATA_DIR, "restaurant-settings.json");
+const ORDERS_PATH = path.join(RUNTIME_DATA_DIR, "orders.json");
+const SOURCE_SETTINGS_PATH = path.join(SOURCE_DATA_DIR, "restaurant-settings.json");
+const SOURCE_ORDERS_PATH = path.join(SOURCE_DATA_DIR, "orders.json");
 
 let settingsQueue: Promise<unknown> = Promise.resolve();
 let ordersQueue: Promise<unknown> = Promise.resolve();
 
 async function ensureDir() {
-  await fs.mkdir(DATA_DIR, { recursive: true });
+  await fs.mkdir(RUNTIME_DATA_DIR, { recursive: true });
 }
 
-async function readJson<T>(filePath: string, fallback: T): Promise<T> {
+async function seedFromSource(targetPath: string, sourcePath: string) {
+  try {
+    await fs.access(targetPath);
+  } catch {
+    try {
+      await fs.mkdir(path.dirname(targetPath), { recursive: true });
+      await fs.copyFile(sourcePath, targetPath);
+    } catch {
+      // ignore source seed failure
+    }
+  }
+}
+
+async function readJson<T>(filePath: string, fallback: T, sourcePath?: string): Promise<T> {
+  if (sourcePath) {
+    await seedFromSource(filePath, sourcePath);
+  }
   try {
     const raw = await fs.readFile(filePath, "utf8");
     return JSON.parse(raw) as T;
@@ -57,7 +76,7 @@ function normalizeSettings(settings: Partial<RestaurantSettings>): RestaurantSet
 }
 
 export async function readRestaurantSettings(): Promise<RestaurantSettings> {
-  const settings = await readJson<Partial<RestaurantSettings>>(SETTINGS_PATH, {});
+  const settings = await readJson<Partial<RestaurantSettings>>(SETTINGS_PATH, {}, SOURCE_SETTINGS_PATH);
   return normalizeSettings(settings);
 }
 
@@ -68,7 +87,7 @@ export async function writeRestaurantSettings(settings: RestaurantSettings) {
 }
 
 export async function readOrders<T = unknown[]>(): Promise<T> {
-  return readJson<T>(ORDERS_PATH, [] as T);
+  return readJson<T>(ORDERS_PATH, [] as T, SOURCE_ORDERS_PATH);
 }
 
 export async function writeOrders<T>(orders: T) {

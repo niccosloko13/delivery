@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Plus, Minus, ShoppingCart, Check } from "lucide-react";
+import { Plus, Minus, ShoppingCart, Check, Share2 } from "lucide-react";
 import type { CatalogData, CatalogProduct } from "@/types/catalog";
 import { useAppStore } from "@/store/app-store";
 import { formatEGP } from "@/lib/utils";
+import { hapticSuccess, shareText } from "@/lib/native/capacitor";
 
 export function ProductPurchase({ product, catalog }: { product: CatalogProduct; catalog: CatalogData }) {
   const { addToCart } = useAppStore();
@@ -41,7 +42,20 @@ export function ProductPurchase({ product, catalog }: { product: CatalogProduct;
         <h1 className="font-display text-3xl font-bold">{product.nameAr}</h1>
         <div className="text-2xl font-black text-[#0f3d2e]">{formatEGP(unitPrice)}</div>
       </div>
-      <p className="mt-3 text-slate-600">{product.shortDescriptionAr}</p>
+      <div className="mt-3 flex items-center justify-between gap-3">
+        <p className="text-slate-600">{product.shortDescriptionAr}</p>
+        <button
+          type="button"
+          onClick={async () => {
+            const url = typeof window !== "undefined" ? window.location.href : `/product/${product.slug}`;
+            await shareText(product.nameAr, product.shortDescriptionAr, url);
+          }}
+          className="inline-flex shrink-0 items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:border-[#0f3d2e] hover:text-[#0f3d2e]"
+        >
+          <Share2 className="h-4 w-4" />
+          شارك المنتج
+        </button>
+      </div>
 
       <div className="mt-5 space-y-4">
         {modifierGroups.map((group) => (
@@ -97,6 +111,7 @@ export function ProductPurchase({ product, catalog }: { product: CatalogProduct;
               selectedModifiers: selected,
               displaySnapshot: { nameAr: product.nameAr, image: product.images[0]?.path || "/images/products/product-fallback.jpg" },
             });
+            void hapticSuccess();
             setAdded(true);
             setTimeout(() => setAdded(false), 1800);
           }}
@@ -109,4 +124,3 @@ export function ProductPurchase({ product, catalog }: { product: CatalogProduct;
     </div>
   );
 }
-

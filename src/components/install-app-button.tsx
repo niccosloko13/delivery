@@ -49,7 +49,7 @@ export function InstallAppButton({ className }: { className?: string }) {
 
   if (installed) {
     return (
-      <div className={cn("fixed bottom-24 left-4 z-40 inline-flex items-center gap-2 rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 shadow-sm lg:static lg:bottom-auto lg:left-auto lg:z-auto", className)}>
+      <div className={cn("native-install-fab fixed bottom-24 left-4 z-40 inline-flex items-center gap-2 rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 shadow-sm lg:static lg:bottom-auto lg:left-auto lg:z-auto", className)}>
         <Sparkles className="h-4 w-4" />
         التطبيق متثبت
       </div>
@@ -72,7 +72,7 @@ export function InstallAppButton({ className }: { className?: string }) {
           setShowIosHint(true);
         }}
         className={cn(
-          "inline-flex items-center gap-2 rounded-2xl border border-white/70 bg-white px-4 py-3 text-sm font-bold text-[#123022] shadow-sm transition hover:-translate-y-0.5 hover:shadow-elevated",
+          "native-install-fab inline-flex items-center gap-2 rounded-2xl border border-white/70 bg-white px-4 py-3 text-sm font-bold text-[#123022] shadow-sm transition hover:-translate-y-0.5 hover:shadow-elevated",
           "fixed bottom-24 left-4 z-40 lg:static lg:bottom-auto lg:left-auto lg:z-auto",
         )}
       >

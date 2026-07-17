@@ -4,6 +4,8 @@ import "./globals.css";
 import { AppStoreProvider } from "@/store/app-store";
 import { SettingsProvider } from "@/components/settings-provider";
 import { PwaRegister } from "@/components/pwa-register";
+import { NativeAppBridge } from "@/components/native-app-bridge";
+import { NativeNetworkStatus } from "@/components/native-network-status";
 
 const cairo = Cairo({
   variable: "--font-sans-ar",
@@ -40,6 +42,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#f5f1e8] text-slate-900">
         <PwaRegister />
+        <NativeAppBridge />
+        <NativeNetworkStatus />
         <AppStoreProvider>
           <SettingsProvider>{children}</SettingsProvider>
         </AppStoreProvider>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ألف سالاد</string>
+    <string name="title_activity_main">ألف سالاد</string>
+    <string name="package_name">com.alefsalad.delivery</string>
+    <string name="custom_url_scheme">com.alefsalad.delivery</string>
+</resources>

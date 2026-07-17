@@ -50,3 +50,8 @@ button {
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+.keyboard-visible .safe-bottom,
+.keyboard-visible .native-install-fab {
+  display: none !important;
+}

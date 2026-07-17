@@ -12,6 +12,7 @@ import { useAppStore } from "@/store/app-store";
 import { buildWhatsAppMessage, calculateDiscount, calculateCartSubtotal, generateOrderNumber } from "@/lib/orders";
 import type { Order } from "@/lib/types";
 import { formatEGP } from "@/lib/utils";
+import { openExternalUrl, hapticSuccess } from "@/lib/native/capacitor";
 
 const changeOptions = ["مش محتاج", "فكة من ٢٠٠", "فكة من ٥٠٠", "فكة من ١٠٠٠", "مبلغ تاني"] as const;
 
@@ -215,7 +216,8 @@ export default function CheckoutPage() {
       status: result.status || "created",
     } as Order);
     setSubmitted(true);
-    window.open(result.whatsappUrl, "_blank", "noopener,noreferrer");
+    void openExternalUrl(result.whatsappUrl);
+    void hapticSuccess();
     setSubmitting(false);
   });
 

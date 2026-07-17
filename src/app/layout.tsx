@@ -3,6 +3,7 @@ import { Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 import { AppStoreProvider } from "@/store/app-store";
 import { SettingsProvider } from "@/components/settings-provider";
+import { LocaleProvider } from "@/providers/locale-provider";
 import { PwaRegister } from "@/components/pwa-register";
 import { NativeAppBridge } from "@/components/native-app-bridge";
 import { NativeNetworkStatus } from "@/components/native-network-status";
@@ -20,7 +21,7 @@ const tajawal = Tajawal({
 
 export const metadata: Metadata = {
   title: "ألف سالاد | Alef Salad",
-  description: "تجربة delivery premium لسلطات وبولات صحية في القاهرة الجديدة",
+  description: "تجربة delivery premium للسلطات والبولز الصحية في القاهرة الجديدة",
   manifest: "/manifest.webmanifest",
   icons: [
     { rel: "icon", url: "/icons/favicon.png" },
@@ -34,19 +35,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ar"
-      dir="rtl"
-      data-scroll-behavior="smooth"
-      className={`${cairo.variable} ${tajawal.variable} h-full antialiased`}
-    >
+    <html lang="ar-EG" dir="rtl" data-scroll-behavior="smooth" className={`${cairo.variable} ${tajawal.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[#f5f1e8] text-slate-900">
         <PwaRegister />
         <NativeAppBridge />
         <NativeNetworkStatus />
-        <AppStoreProvider>
-          <SettingsProvider>{children}</SettingsProvider>
-        </AppStoreProvider>
+        <LocaleProvider>
+          <AppStoreProvider>
+            <SettingsProvider>{children}</SettingsProvider>
+          </AppStoreProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

@@ -83,7 +83,7 @@ export function InstallAppButton({ className }: { className?: string }) {
       {showIosHint ? (
         <div className="fixed bottom-[5.75rem] left-4 z-40 max-w-xs rounded-2xl border border-white/80 bg-[#123022] p-4 text-right text-sm text-white shadow-elevated lg:bottom-auto lg:left-auto lg:top-full lg:mt-3 lg:w-80">
           <div className="font-bold">على الآيفون</div>
-          <div className="mt-1 text-white/85">افتح المشاركة من Safari وبعدين اختار &quot;Add to Home Screen&quot;.</div>
+          <div className="mt-1 text-white/85">افتح زر المشاركة من Safari وبعدها اختر إضافة إلى الشاشة الرئيسية.</div>
         </div>
       ) : null}
     </div>

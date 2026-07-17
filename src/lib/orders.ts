@@ -87,10 +87,10 @@ function renderTemplate(template: string, values: Record<string, string>) {
 }
 
 function paymentDetailsText(params: { settings: RestaurantSettings; paymentMethod: string; changeFor?: number | null }) {
-  const method = params.settings.paymentMethods.find((item) => item.nameAr === params.paymentMethod || item.id === params.paymentMethod);
+  const method = params.settings.paymentMethods.find((item) => item.type === params.paymentMethod || item.id === params.paymentMethod || item.nameAr === params.paymentMethod);
   const lines: string[] = [];
   if (method?.instructions) lines.push(method.instructions);
-  if (params.changeFor && params.paymentMethod === "كاش عند الاستلام") lines.push(`محتاج فكة من ${formatEGP(params.changeFor)}`);
+  if (params.changeFor && params.paymentMethod === "cash") lines.push(`محتاج فكة من ${formatEGP(params.changeFor)}`);
   if (method?.type === "instapay") {
     const ipa = String(method.config.ipa || "");
     const beneficiaryName = String(method.config.beneficiaryName || "");
@@ -160,7 +160,7 @@ export function buildWhatsAppMessage(params: {
     total: formatEGP(total),
     paymentMethod: paymentMethodLabel,
     paymentDetails: paymentDetailsText({ settings, paymentMethod: paymentMethodLabel, changeFor }),
-    deliveryTime: deliveryTimeLabel || "في أسرع وقت",
+    deliveryTime: deliveryTimeLabel || "من أسرع وقت",
     notes: notes || address.driverNotes || "-",
     couponCode: couponCode || "",
   };
@@ -171,4 +171,3 @@ export function buildWhatsAppMessage(params: {
 export function buildWhatsAppUrl(whatsapp: string, message: string) {
   return `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;
 }
-

@@ -6,6 +6,7 @@ import { Heart, Leaf, MapPin, Search, ShoppingBag, User2 } from "lucide-react";
 import { useAppStore } from "@/store/app-store";
 import { useRestaurantSettings } from "@/components/settings-provider";
 import { InstallAppButton } from "@/components/install-app-button";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { cn, formatEGP } from "@/lib/utils";
 
 const mobileNav = [
@@ -40,7 +41,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Search className="h-4 w-4 text-slate-400" />
             <input
               className="w-full bg-transparent text-sm outline-none placeholder:text-slate-400"
-              placeholder="دوّر على سلطة، بول، أو مشروب..."
+              placeholder="دور على سلطة، بول، أو مشروب..."
               aria-label="بحث"
             />
           </div>
@@ -49,6 +50,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <MapPin className="h-4 w-4 text-emerald-700" />
             <span className="max-w-[280px] truncate">{settings.address}</span>
           </div>
+
+          <LanguageSwitcher className="hidden lg:inline-flex" />
 
           <Link href="/account" className="hidden items-center gap-2 rounded-[22px] border border-white/70 bg-white px-4 py-3 text-sm font-semibold shadow-sm lg:flex">
             <User2 className="h-4 w-4" />
@@ -62,10 +65,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
           <InstallAppButton />
 
-          <Link
-            href="/cart"
-            className="relative ml-auto flex items-center gap-2 rounded-[22px] bg-[#123b2b] px-4 py-3 text-sm font-bold text-white shadow-elevated"
-          >
+          <Link href="/cart" className="relative ml-auto flex items-center gap-2 rounded-[22px] bg-[#123b2b] px-4 py-3 text-sm font-bold text-white shadow-elevated">
             <ShoppingBag className="h-4 w-4" />
             <span>السلة</span>
             <span className="rounded-full bg-white/15 px-2 py-0.5 text-xs">{cart.length}</span>
@@ -85,7 +85,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 href={item.href}
                 className={cn(
                   "flex flex-col items-center justify-center rounded-2xl px-2 py-2 text-[11px] font-semibold transition",
-                  active ? "bg-[#123b2b] text-white shadow-soft" : "text-slate-600"
+                  active ? "bg-[#123b2b] text-white shadow-soft" : "text-slate-600",
                 )}
               >
                 <span>{item.label}</span>

@@ -3,25 +3,25 @@
   "nameEn": "Alef Salad",
   "description": "تجربة delivery premium للسلطات والبولات الصحية في القاهرة الجديدة",
   "phone": "٠١٠١ ٢٣٤ ٥٦٧٨",
-  "whatsapp": "201099999999",
-  "address": "٢٥ شارع التسعين الش���الي، التج���ع الخا���س، القاهرة الجديدة",
-  "area": "التج���ع الخا���س",
+  "whatsapp": "201012345678",
+  "address": "٢٥ شارع التسعين الشمالي، التجمع الخامس، القاهرة الجديدة",
+  "area": "التجمع الخامس",
   "city": "القاهرة الجديدة",
   "openTime": "10:00",
   "closeTime": "00:00",
   "minDeliveryTime": 25,
   "maxDeliveryTime": 40,
   "currency": "جنيه",
-  "minimumOrder": 300,
+  "minimumOrder": 120,
   "deliveryFee": 25,
   "status": "open",
   "acceptScheduledOrders": true,
-  "closedMessage": "ال���طع��� ���قفول دلوقتي، بس تقدر تحجز طلبك لوقت لاحق.",
+  "closedMessage": "المطعم مقفول دلوقتي، بس تقدر تحجز طلبك لوقت لاحق.",
   "paymentMethods": [
     {
       "id": "cash",
       "type": "cash",
-      "nameAr": "كاش عند الاستلا���",
+      "nameAr": "كاش عند الاستلام",
       "enabled": true,
       "order": 1,
       "requiresProof": false,
@@ -37,7 +37,7 @@
     {
       "id": "card_on_delivery",
       "type": "card_on_delivery",
-      "nameAr": "بطاقة عند الاستلا���",
+      "nameAr": "بطاقة عند الاستلام",
       "enabled": true,
       "order": 2,
       "requiresProof": false,
@@ -46,7 +46,7 @@
         "mastercard": true,
         "meeza": true,
         "contactless": true,
-        "machineNote": "���اكينة الدفع هتكون ���ع ���ندوب التوصيل"
+        "machineNote": "ماكينة الدفع هتكون مع مندوب التوصيل"
       }
     },
     {
@@ -56,7 +56,7 @@
       "enabled": true,
       "order": 3,
       "requiresProof": true,
-      "instructions": "حوّل ال���بلغ على إنستا باي وابعت صورة التحويل ���ع الطلب على واتساب",
+      "instructions": "حوّل المبلغ على إنستا باي وابعت صورة التحويل مع الطلب على واتساب",
       "config": {
         "beneficiaryName": "Alef Salad",
         "ipa": "alefsalad@instapay",
@@ -66,7 +66,7 @@
     {
       "id": "wallet",
       "type": "mobile_wallet",
-      "nameAr": "���حفظة إلكترونية",
+      "nameAr": "محفظة إلكترونية",
       "enabled": true,
       "order": 4,
       "requiresProof": true,
@@ -77,7 +77,7 @@
     {
       "id": "meeza",
       "type": "meeza",
-      "nameAr": "���يزة",
+      "nameAr": "ميزة",
       "enabled": false,
       "order": 5,
       "requiresProof": false,
@@ -139,7 +139,7 @@
   "zones": [
     {
       "id": "tagamo3-5",
-      "nameAr": "التج���ع الخا���س",
+      "nameAr": "التجمع الخامس",
       "fee": 25,
       "minimumOrder": 120,
       "estimatedMinMinutes": 25,
@@ -149,7 +149,7 @@
     },
     {
       "id": "tagamo3-1",
-      "nameAr": "التج���ع الأول",
+      "nameAr": "التجمع الأول",
       "fee": 30,
       "minimumOrder": 130,
       "estimatedMinMinutes": 30,
@@ -159,7 +159,7 @@
     },
     {
       "id": "nasr",
-      "nameAr": "���دينة نصر",
+      "nameAr": "مدينة نصر",
       "fee": 40,
       "minimumOrder": 150,
       "estimatedMinMinutes": 35,
@@ -168,7 +168,7 @@
     },
     {
       "id": "heliopolis",
-      "nameAr": "���صر الجديدة",
+      "nameAr": "مصر الجديدة",
       "fee": 40,
       "minimumOrder": 150,
       "estimatedMinMinutes": 35,
@@ -177,7 +177,7 @@
     },
     {
       "id": "maadi",
-      "nameAr": "ال���عادي",
+      "nameAr": "المعادي",
       "fee": 50,
       "minimumOrder": 170,
       "estimatedMinMinutes": 40,
@@ -195,7 +195,7 @@
     },
     {
       "id": "madinaty",
-      "nameAr": "���دينتي",
+      "nameAr": "مدينتي",
       "fee": 45,
       "minimumOrder": 160,
       "estimatedMinMinutes": 40,
@@ -216,9 +216,9 @@
     }
   ],
   "checkoutMessage": {
-    "title": "طلب جديد ���ن {{restaurantName}}",
-    "intro": "*طلب جديد ���ن {{restaurantName}}*\n\nرق��� الطلب: *{{orderNumber}}*",
-    "outro": "���ن فضلك أكد الطلب ووقت التوصيل",
+    "title": "طلب جديد من {{restaurantName}}",
+    "intro": "*طلب جديد من {{restaurantName}}*\n\nرقم الطلب: *{{orderNumber}}*",
+    "outro": "من فضلك أكد الطلب ووقت التوصيل",
     "includeEmojis": false,
     "includePrices": true,
     "includeNotes": true,
@@ -227,6 +227,6 @@
     "includeCustomerNumber": true,
     "includeTime": true,
     "includeCoupon": true,
-    "body": "*طلب جديد ���ن {{restaurantName}}*\n\nرق��� الطلب: *{{orderNumber}}*\nالتاريخ: {{date}}\nالوقت: {{time}}\n\n*بيانات الع���يل*\nالاس���: {{customerName}}\nرق��� ال���وبايل: {{customerPhone}}\n\n*عنوان التوصيل*\n{{address}}\n\n{{locationUrl}}\n\n*الطلب*\n{{items}}\n\n*الحساب*\nال���ج���وع الفرعي: {{subtotal}}\nرسو��� التوصيل: {{deliveryFee}}\nالخص���: {{discount}}\nالإج���الي: *{{total}}*\n\n*طريقة الدفع*\n{{paymentMethod}}\n{{paymentDetails}}\n\n*���يعاد التوصيل*\n{{deliveryTime}}\n\n*���لاحظات*\n{{notes}}\n\n���ن فضلك أكد الطلب ووقت التوصيل"
+    "body": "*طلب جديد من {{restaurantName}}*\n\nرقم الطلب: *{{orderNumber}}*\nالتاريخ: {{date}}\nالوقت: {{time}}\n\n*بيانات العميل*\nالاسم: {{customerName}}\nرقم الموبايل: {{customerPhone}}\n\n*عنوان التوصيل*\n{{address}}\n\n{{locationUrl}}\n\n*الطلب*\n{{items}}\n\n*الحساب*\nالمجموع الفرعي: {{subtotal}}\nرسوم التوصيل: {{deliveryFee}}\nالخصم: {{discount}}\nالإجمالي: *{{total}}*\n\n*طريقة الدفع*\n{{paymentMethod}}\n{{paymentDetails}}\n\n*ميعاد التوصيل*\n{{deliveryTime}}\n\n*ملاحظات*\n{{notes}}\n\nمن فضلك أكد الطلب ووقت التوصيل"
   }
 }

@@ -110,9 +110,7 @@ export const defaultRestaurantSettings: RestaurantSettings = {
     { id: "rehab", nameAr: "الرحاب", fee: 35, minimumOrder: 140, estimatedMinMinutes: 30, estimatedMaxMinutes: 45, enabled: true },
     { id: "madinaty", nameAr: "مدينتي", fee: 45, minimumOrder: 160, estimatedMinMinutes: 40, estimatedMaxMinutes: 55, enabled: true },
   ],
-  coupons: [
-    { code: "ALEF20", type: "percent", value: 20, maxDiscount: 100, minimumOrder: 120, active: true, firstOrderOnly: true, areas: [] },
-  ],
+  coupons: [{ code: "ALEF20", type: "percent", value: 20, maxDiscount: 100, minimumOrder: 120, active: true, firstOrderOnly: true, areas: [] }],
   checkoutMessage: {
     title: "طلب جديد من {{restaurantName}}",
     intro: "*طلب جديد من {{restaurantName}}*\n\nرقم الطلب: *{{orderNumber}}*",

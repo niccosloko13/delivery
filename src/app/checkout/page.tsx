@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useMemo, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,32 +10,46 @@ import { ArrowLeft, CheckCircle2, Loader2, MessageCircleMore, ShoppingBag, Truck
 import { SiteShell } from "@/components/site-shell";
 import { useRestaurantSettings } from "@/components/settings-provider";
 import { useAppStore } from "@/store/app-store";
-import { buildWhatsAppMessage, calculateDiscount, calculateCartSubtotal, generateOrderNumber } from "@/lib/orders";
+import { buildWhatsAppMessage, calculateCartSubtotal, calculateDiscount } from "@/lib/orders";
 import type { Order } from "@/lib/types";
 import { formatEGP } from "@/lib/utils";
-import { openExternalUrl, hapticSuccess } from "@/lib/native/capacitor";
+import { hapticSuccess, openExternalUrl } from "@/lib/native/capacitor";
 
-const changeOptions = ["مش محتاج", "فكة من ٢٠٠", "فكة من ٥٠٠", "فكة من ١٠٠٠", "مبلغ تاني"] as const;
+const changeOptions = ["مش محتاج", "فكة من 200", "فكة من 500", "فكة من 1000", "مبلغ تاني"] as const;
+const paymentSchema = z.enum(["cash", "card_on_delivery", "instapay", "wallet"]);
+
+function normalizePhoneInput(value: string) {
+  const easternDigits = "٠١٢٣٤٥٦٧٨٩";
+  return value
+    .replace(/[٠-٩]/g, (digit) => String(easternDigits.indexOf(digit)))
+    .replace(/[^\d+]/g, "")
+    .replace(/\+/g, "")
+    .trim();
+}
 
 const schema = z
   .object({
-    name: z.string().min(2, "اكتب اسمك من فضلك"),
-    phone: z.string().regex(/^(?:\+20|20|0)?1[0125][0-9]{8}$/, "اكتب رقم موبايل صحيح"),
-    area: z.string().min(2, "اختار المنطقة"),
-    street: z.string().min(2, "اكتب اسم الشارع"),
-    building: z.string().min(1, "اكتب رقم العمارة"),
-    floor: z.string().optional(),
-    apartment: z.string().optional(),
-    landmark: z.string().optional(),
-    driverNotes: z.string().optional(),
-    paymentMethod: z.enum(["cash", "card_on_delivery", "instapay", "wallet"]),
+    name: z.string().trim().min(2, "اكتب اسمك من فضلك"),
+    phone: z
+      .string()
+      .trim()
+      .transform(normalizePhoneInput)
+      .refine((value) => /^(?:20|0)?1[0125][0-9]{8}$/.test(value), "اكتب رقم موبايل صحيح"),
+    area: z.string().trim().min(2, "اختار المنطقة"),
+    street: z.string().trim().min(2, "اكتب اسم الشارع"),
+    building: z.string().trim().min(1, "اكتب رقم العمارة"),
+    floor: z.string().trim().optional().or(z.literal("")),
+    apartment: z.string().trim().optional().or(z.literal("")),
+    landmark: z.string().trim().optional().or(z.literal("")),
+    driverNotes: z.string().trim().optional().or(z.literal("")),
+    paymentMethod: paymentSchema,
     changeChoice: z.enum(changeOptions).optional(),
-    customChange: z.string().optional(),
+    customChange: z.string().trim().optional().or(z.literal("")),
   })
-  .refine((values) => values.paymentMethod !== "cash" || values.changeChoice !== "مبلغ تاني" || !!values.customChange?.trim(), {
-    path: ["customChange"],
-    message: "اكتب المبلغ المطلوب للفكة",
-  });
+  .refine(
+    (values) => values.paymentMethod !== "cash" || values.changeChoice !== "مبلغ تاني" || !!values.customChange?.trim(),
+    { path: ["customChange"], message: "اكتب المبلغ المطلوب للفكة" },
+  );
 
 type FormValues = z.infer<typeof schema>;
 
@@ -47,7 +62,7 @@ const paymentLabels: Record<FormValues["paymentMethod"], string> = {
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { cart, coupon, savedOrders, createOrder, clearCart } = useAppStore();
+  const { cart, coupon, createOrder, clearCart } = useAppStore();
   const settings = useRestaurantSettings();
   const [submitted, setSubmitted] = useState(false);
   const [whatsappUrl, setWhatsappUrl] = useState<string | null>(null);
@@ -99,126 +114,134 @@ export default function CheckoutPage() {
     }
 
     setSubmitting(true);
-    const number = generateOrderNumber(savedOrders.map((order) => order.number));
-    const createdAt = new Date().toISOString();
-    const orderItems = cart.map((item) => {
-      const unitPrice = item.unitPrice ?? item.customPrice ?? 0;
-      return {
-        productId: item.productId,
-        nameAr: item.displaySnapshot?.nameAr || item.nameAr || item.productId,
-        quantity: item.quantity,
-        size: item.size,
-        base: item.base,
-        protein: item.protein,
-        vegetables: item.vegetables,
-        sauces: item.sauces,
-        extras: item.extras,
-        removals: item.removals,
-        notes: item.notes,
-        modifiers: item.selectedModifiers?.flatMap((modifier) =>
-          modifier.optionNamesAr?.length
-            ? [
-                {
-                  groupNameAr: modifier.groupNameAr || modifier.groupId,
-                  optionNamesAr: modifier.optionNamesAr,
-                },
-              ]
-            : [],
-        ) || [],
-        unitPrice,
-        lineTotal: unitPrice * item.quantity,
+    try {
+      const createdAt = new Date().toISOString();
+      const changeFor =
+        values.paymentMethod === "cash"
+          ? values.changeChoice === "فكة من 200"
+            ? 200
+            : values.changeChoice === "فكة من 500"
+              ? 500
+              : values.changeChoice === "فكة من 1000"
+                ? 1000
+                : values.changeChoice === "مبلغ تاني" && values.customChange
+                  ? Number(values.customChange)
+                  : null
+          : null;
+
+      const payload = {
+        customer: {
+          name: values.name.trim(),
+          phone: normalizePhoneInput(values.phone),
+        },
+        address: {
+          area: values.area.trim(),
+          street: values.street.trim(),
+          building: values.building.trim(),
+          floor: values.floor?.trim(),
+          apartment: values.apartment?.trim(),
+          landmark: values.landmark?.trim(),
+          driverNotes: values.driverNotes?.trim(),
+        },
+        items: cart.map((item) => ({
+          productId: item.productId,
+          quantity: item.quantity,
+          selectedModifiers: item.selectedModifiers ?? [],
+          notes: item.notes,
+        })),
+        couponCode: coupon.trim().toUpperCase() === "ALEF20" ? "ALEF20" : undefined,
+        paymentMethod: values.paymentMethod,
+        changeFor,
       };
-    });
 
-    const address = {
-      area: values.area,
-      street: values.street,
-      building: values.building,
-      floor: values.floor,
-      apartment: values.apartment,
-      landmark: values.landmark,
-      driverNotes: values.driverNotes,
-    };
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const changeFor = values.paymentMethod === "cash" && values.changeChoice === "مبلغ تاني" && values.customChange ? Number(values.customChange) : values.changeChoice === "فكة من ٢٠٠" ? 200 : values.changeChoice === "فكة من ٥٠٠" ? 500 : values.changeChoice === "فكة من ١٠٠٠" ? 1000 : null;
+      const result = (await response.json().catch(() => null)) as { success?: boolean; orderId?: string; whatsappUrl?: string; status?: string; message?: string } | null;
 
-    const order = {
-      id: number,
-      number,
-      createdAt,
-      customer: { name: values.name, phone: values.phone },
-      address,
-      items: orderItems,
-      subtotal,
-      deliveryFee,
-      discount,
-      total,
-      couponCode: coupon.trim().toUpperCase() === "ALEF20" ? "ALEF20" : undefined,
-      paymentMethod: values.paymentMethod,
-      changeFor,
-      status: "في انتظار الإرسال" as const,
-    };
+      if (!response.ok || !result?.success || !result.orderId || !result.whatsappUrl) {
+        form.setError("root", { message: result?.message || "حصلت مشكلة أثناء إنشاء الطلب" });
+        return;
+      }
 
-    const message = buildWhatsAppMessage({
-      order,
-      customer: order.customer,
-      address,
-      paymentMethodLabel: paymentLabels[values.paymentMethod],
-      settings,
-      changeFor,
-      couponCode: order.couponCode,
-      discountValue: discount,
-      subtotal,
-      deliveryFee,
-      total,
-      deliveryTimeLabel: "في أسرع وقت",
-    });
+      const orderItems = cart.map((item) => {
+        const unitPrice = item.unitPrice ?? item.customPrice ?? 0;
+        return {
+          productId: item.productId,
+          nameAr: item.displaySnapshot?.nameAr || item.nameAr || item.productId,
+          quantity: item.quantity,
+          size: item.size,
+          base: item.base,
+          protein: item.protein,
+          vegetables: item.vegetables,
+          sauces: item.sauces,
+          extras: item.extras,
+          removals: item.removals,
+          notes: item.notes,
+          modifiers:
+            item.selectedModifiers?.flatMap((modifier) =>
+              modifier.optionNamesAr?.length
+                ? [
+                    {
+                      groupNameAr: modifier.groupNameAr || modifier.groupId,
+                      optionNamesAr: modifier.optionNamesAr,
+                    },
+                  ]
+                : [],
+            ) || [],
+          unitPrice,
+          lineTotal: unitPrice * item.quantity,
+        };
+      });
 
-    const response = await fetch("/api/orders", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+      const order: Order = {
+        id: result.orderId,
+        number: result.orderId,
+        createdAt,
+        customer: payload.customer,
+        address: payload.address,
+        items: orderItems,
+        subtotal,
+        deliveryFee,
+        discount,
+        total,
+        couponCode: payload.couponCode,
+        paymentMethod: values.paymentMethod,
+        changeFor,
+        status: (result.status || "created") as Order["status"],
+        whatsappUrl: result.whatsappUrl,
+      };
+
+      const message = buildWhatsAppMessage({
+        order,
         customer: order.customer,
         address: order.address,
-        items: cart,
+        paymentMethodLabel: paymentLabels[values.paymentMethod],
+        settings,
+        changeFor,
         couponCode: order.couponCode,
-        paymentMethod: values.paymentMethod,
-        changeFor: order.changeFor,
-      }),
-    });
-    const result = (await response.json().catch(() => null)) as { success?: boolean; orderId?: string; whatsappUrl?: string; status?: string } | null;
-    if (!response.ok || !result?.success || !result.orderId || !result.whatsappUrl) {
-      form.setError("root", { message: "حصلت مشكلة أثناء إنشاء الطلب" });
-      setSubmitting(false);
-      return;
-    }
+        discountValue: discount,
+        subtotal,
+        deliveryFee,
+        total,
+        deliveryTimeLabel: `من ${settings.minDeliveryTime} لـ ${settings.maxDeliveryTime} دقيقة`,
+      });
 
-    const persistedOrder: Order = { ...order, id: result.orderId, number: result.orderId, whatsappMessage: message, whatsappUrl: result.whatsappUrl, status: "created" };
-    createOrder(persistedOrder);
-    clearCart();
-    setWhatsappUrl(result.whatsappUrl);
-    setCreatedNumber(result.orderId);
-    setConfirmedOrder({
-      id: result.orderId,
-      number: result.orderId,
-      createdAt,
-      whatsappUrl: result.whatsappUrl,
-      customer: order.customer,
-      address: order.address,
-      items: order.items,
-      subtotal: order.subtotal,
-      deliveryFee: order.deliveryFee,
-      discount: order.discount,
-      total: order.total,
-      couponCode: order.couponCode,
-      paymentMethod: order.paymentMethod,
-      changeFor: order.changeFor,
-      status: result.status || "created",
-    } as Order);
-    setSubmitted(true);
-    void openExternalUrl(result.whatsappUrl);
-    void hapticSuccess();
-    setSubmitting(false);
+      const confirmed: Order = { ...order, whatsappMessage: message };
+      createOrder(confirmed);
+      clearCart();
+      setWhatsappUrl(result.whatsappUrl);
+      setCreatedNumber(result.orderId);
+      setConfirmedOrder(confirmed);
+      setSubmitted(true);
+      void openExternalUrl(result.whatsappUrl);
+      void hapticSuccess();
+    } finally {
+      setSubmitting(false);
+    }
   });
 
   if (submitted && createdNumber) {
@@ -249,12 +272,12 @@ export default function CheckoutPage() {
             >
               أنا بعت الطلب
             </button>
-            <button type="button" onClick={() => router.push("/track")} className="rounded-2xl border px-5 py-3 font-bold">
+            <Link href="/track" className="rounded-2xl border px-5 py-3 font-bold">
               تابع الطلب
-            </button>
-            <button type="button" onClick={() => router.push("/")} className="rounded-2xl border px-5 py-3 font-bold">
+            </Link>
+            <Link href="/" className="rounded-2xl border px-5 py-3 font-bold">
               ارجع للرئيسية
-            </button>
+            </Link>
           </div>
         </div>
       </SiteShell>
@@ -270,20 +293,20 @@ export default function CheckoutPage() {
               <h1 className="font-display text-3xl font-bold">Checkout</h1>
               <p className="mt-2 text-slate-600">راجع الطلب وأكده على واتساب</p>
             </div>
-            <div className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-800">
-              {settings.minimumOrder} جنيه الحد الأدنى
-            </div>
+            <div className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-800">{settings.minimumOrder} جنيه الحد الأدنى</div>
           </div>
 
           {form.formState.errors.root?.message ? <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{form.formState.errors.root.message}</div> : null}
 
           <Section title="بيانات العميل">
-            <Field label="الاسم" error={form.formState.errors.name?.message}>
-              <input {...form.register("name")} className={inputStyle} placeholder="الاسم" />
-            </Field>
-            <Field label="رقم الموبايل" error={form.formState.errors.phone?.message}>
-              <input {...form.register("phone")} className={inputStyle} placeholder="01012345678" />
-            </Field>
+            <div className="grid gap-4 md:grid-cols-2">
+              <Field label="الاسم" error={form.formState.errors.name?.message}>
+                <input {...form.register("name")} className={inputStyle} placeholder="الاسم" />
+              </Field>
+              <Field label="رقم الموبايل" error={form.formState.errors.phone?.message}>
+                <input {...form.register("phone", { setValueAs: normalizePhoneInput })} className={inputStyle} placeholder="01012345678" inputMode="tel" />
+              </Field>
+            </div>
           </Section>
 
           <Section title="عنوان التوصيل">
@@ -314,15 +337,18 @@ export default function CheckoutPage() {
 
           <Section title="طريقة الدفع">
             <div className="grid gap-3">
-              {paymentMethods.map((method) => (
-                <label key={method.id} className="flex cursor-pointer items-center justify-between rounded-2xl border border-slate-200 bg-[#fbfaf6] px-4 py-4">
-                  <div>
-                    <div className="font-medium">{method.nameAr}</div>
-                    {method.instructions ? <div className="text-sm text-slate-500">{method.instructions}</div> : null}
-                  </div>
-                  <input type="radio" value={method.type === "mobile_wallet" ? "wallet" : method.type} {...form.register("paymentMethod")} />
-                </label>
-              ))}
+              {paymentMethods.map((method) => {
+                const value = method.type === "mobile_wallet" ? "wallet" : method.type;
+                return (
+                  <label key={method.id} className="flex cursor-pointer items-center justify-between rounded-2xl border border-slate-200 bg-[#fbfaf6] px-4 py-4">
+                    <div>
+                      <div className="font-medium">{method.nameAr}</div>
+                      {method.instructions ? <div className="text-sm text-slate-500">{method.instructions}</div> : null}
+                    </div>
+                    <input type="radio" value={value} {...form.register("paymentMethod")} />
+                  </label>
+                );
+              })}
             </div>
           </Section>
 
@@ -346,7 +372,7 @@ export default function CheckoutPage() {
             )}
           </Section>
 
-          <div className="flex gap-3">
+          <div className="safe-bottom sticky bottom-4 z-20 flex gap-3 bg-white/85 backdrop-blur-xl">
             <button
               type="submit"
               disabled={submitting}
@@ -377,7 +403,7 @@ export default function CheckoutPage() {
           <div className="rounded-[28px] bg-[#fbfaf6] p-4 text-sm text-slate-600">
             <div className="font-bold text-slate-900">واتساب المطعم</div>
             <div className="mt-1">{settings.phone}</div>
-            <div className="mt-1">{settings.address}</div>
+            <div className="mt-1 break-words">{settings.address}</div>
           </div>
           <div className="rounded-[28px] border border-dashed border-slate-300 p-4 text-sm text-slate-600">
             بعد التأكيد هيفتح واتساب مباشرة، ولو ما فتحش تقدر تضغط زر الفتح في شاشة النجاح.

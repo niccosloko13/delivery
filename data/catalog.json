@@ -2068,27 +2068,27 @@
       "slug": "premium-avocado-salad",
       "sku": "PRM-AVO-001",
       "productType": "standard",
-      "nameAr": "???? ??????? ???????",
+      "nameAr": "سلطة أفوكادو بريميوم",
       "nameEn": "Premium Avocado Salad",
-      "shortDescriptionAr": "???? ?????? ???????? ?? ??????? ????? ???? ???? ?????",
-      "fullDescriptionAr": "???? ?????? ???????? ?? ??????? ????? ???? ???? ?????",
+      "shortDescriptionAr": "فراخ مشوية، أفوكادو، خس كريسبي، طماطم شيري وصوص مخصوص",
+      "fullDescriptionAr": "سلطة مميزة بفراخ مشوية وأفوكادو طازة وخضار فريش مع صوص مخصوص بطعم متوازن ومناسب للغدا أو العشا.",
       "categoryId": "chicken",
       "basePrice": 190,
       "oldPrice": 220,
       "promotionalPrice": 190,
-      "badgeAr": "?????? ?????",
+      "badgeAr": "اختيار الشيف",
       "images": [
         {
           "id": "main",
           "path": "/images/products/avocado-chicken-bowl.jpg",
-          "alt": "???? ??????? ???????",
+          "alt": "سلطة أفوكادو بريميوم",
           "source": "generated"
         }
       ],
       "ingredients": [],
       "tags": [
-        "????",
-        "?????? ?????"
+        "مميز",
+        "اختيار الشيف"
       ],
       "calories": 420,
       "rating": 4.9,
@@ -2578,9 +2578,9 @@
   "modifiers": [
     {
       "id": "mod-92516ee0",
-      "nameAr": "????? ?????",
+      "nameAr": "اختار الحجم",
       "nameEn": "Choose Size",
-      "descriptionAr": "????? ??? ??????",
+      "descriptionAr": "اختيار حجم السلطة",
       "type": "single",
       "required": true,
       "minSelections": 1,
@@ -2588,14 +2588,14 @@
       "options": [
         {
           "id": "size-normal",
-          "nameAr": "????",
+          "nameAr": "عادي",
           "nameEn": "Regular",
           "price": 0,
           "available": true
         },
         {
           "id": "size-large",
-          "nameAr": "????",
+          "nameAr": "كبير",
           "nameEn": "Large",
           "price": 40,
           "available": true
@@ -2607,9 +2607,9 @@
     },
     {
       "id": "mod-9fbaad87",
-      "nameAr": "??????",
+      "nameAr": "الإضافات",
       "nameEn": "Extras",
-      "descriptionAr": "?????? ????????",
+      "descriptionAr": "إضافات اختيارية",
       "type": "multiple",
       "required": false,
       "minSelections": 0,
@@ -2617,21 +2617,21 @@
       "options": [
         {
           "id": "extra-avocado",
-          "nameAr": "??????? ?????",
+          "nameAr": "أفوكادو زيادة",
           "nameEn": "Extra Avocado",
           "price": 35,
           "available": true
         },
         {
           "id": "extra-chicken",
-          "nameAr": "???? ?????",
+          "nameAr": "فراخ زيادة",
           "nameEn": "Extra Chicken",
           "price": 50,
           "available": true
         },
         {
           "id": "extra-feta",
-          "nameAr": "???? ????",
+          "nameAr": "جبنة فيتا",
           "nameEn": "Feta Cheese",
           "price": 25,
           "available": true

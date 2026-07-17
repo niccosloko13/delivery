@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 import { AppStoreProvider } from "@/store/app-store";
+import { SettingsProvider } from "@/components/settings-provider";
 
 const cairo = Cairo({
   variable: "--font-sans-ar",
@@ -34,7 +35,9 @@ export default function RootLayout({
       className={`${cairo.variable} ${tajawal.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#f5f1e8] text-slate-900">
-        <AppStoreProvider>{children}</AppStoreProvider>
+        <AppStoreProvider>
+          <SettingsProvider>{children}</SettingsProvider>
+        </AppStoreProvider>
       </body>
     </html>
   );

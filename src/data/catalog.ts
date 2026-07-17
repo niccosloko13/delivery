@@ -68,7 +68,7 @@ export const addresses = [
 export const products: Product[] = [
   {
     id: "caesar-chicken",
-    slug: "ceaser-tcheken-salad",
+    slug: "caesar-chicken-salad",
     nameAr: "سيزر تشيكن سالاد",
     nameEn: "Caesar Chicken Salad",
     descriptionAr: "خس كريسبي، فراخ مشوية، جبنة بارميزان، كروتون وصوص سيزر بتاعنا",
@@ -86,7 +86,7 @@ export const products: Product[] = [
   },
   {
     id: "greek-salad",
-    slug: "griik-salad",
+    slug: "greek-salad",
     nameAr: "جريك سالاد",
     nameEn: "Greek Salad",
     descriptionAr: "خيار، طماطم، زيتون، جبنة فيتا، بصل أحمر وصوص ليمون وزيت زيتون",

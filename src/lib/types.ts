@@ -20,6 +20,30 @@ export type ProductTag =
   | "حار"
   | "الأكثر طلبًا";
 
+export type PaymentMethod = "cash" | "card_on_delivery" | "instapay" | "wallet";
+
+export interface Customer {
+  name: string;
+  phone: string;
+  email?: string;
+}
+
+export interface Address {
+  area: string;
+  street: string;
+  building: string;
+  floor?: string;
+  apartment?: string;
+  landmark?: string;
+  driverNotes?: string;
+}
+
+export interface Coupon {
+  code: string;
+  discountPercent: number;
+  maxDiscount?: number;
+}
+
 export interface ModifierGroup {
   id: string;
   nameAr: string;
@@ -53,6 +77,46 @@ export interface Product {
   featured: boolean;
 }
 
+export interface OrderItemSnapshot {
+  productId: string;
+  nameAr: string;
+  quantity: number;
+  modifiers?: Array<{
+    groupNameAr: string;
+    optionNamesAr: string[];
+    optionPrice?: number;
+  }>;
+  size?: "عادي" | "كبير";
+  base?: string;
+  protein?: string[];
+  vegetables?: string[];
+  sauces?: string[];
+  extras?: string[];
+  removals?: string[];
+  notes?: string;
+  unitPrice: number;
+  lineTotal: number;
+}
+
+export interface Order {
+  id: string;
+  number: string;
+  createdAt: string;
+  customer: Customer;
+  address: Address;
+  items: OrderItemSnapshot[];
+  subtotal: number;
+  deliveryFee: number;
+  discount: number;
+  total: number;
+  couponCode?: string;
+  paymentMethod: PaymentMethod;
+  changeFor?: number | null;
+  status: "created" | "whatsapp_opened" | "customer_marked_as_sent" | "restaurant_confirmed" | "preparing" | "out_for_delivery" | "delivered" | "cancelled" | "confirmed" | "pending" | "في انتظار الإرسال" | "تم إرسال الطلب" | "تم التأكيد" | "جاري التحضير" | "خرج للتوصيل" | "تم التوصيل" | "ملغي";
+  whatsappMessage?: string;
+  whatsappUrl?: string;
+}
+
 export interface Category {
   id: CategoryId;
   nameAr: string;
@@ -73,4 +137,3 @@ export interface Review {
   rating: number;
   textAr: string;
 }
-

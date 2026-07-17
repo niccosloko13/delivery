@@ -1,0 +1,232 @@
+{
+  "nameAr": "ألف سالاد",
+  "nameEn": "Alef Salad",
+  "description": "تجربة delivery premium للسلطات والبولات الصحية في القاهرة الجديدة",
+  "phone": "٠١٠١ ٢٣٤ ٥٦٧٨",
+  "whatsapp": "201099999999",
+  "address": "٢٥ شارع التسعين الش���الي، التج���ع الخا���س، القاهرة الجديدة",
+  "area": "التج���ع الخا���س",
+  "city": "القاهرة الجديدة",
+  "openTime": "10:00",
+  "closeTime": "00:00",
+  "minDeliveryTime": 25,
+  "maxDeliveryTime": 40,
+  "currency": "جنيه",
+  "minimumOrder": 300,
+  "deliveryFee": 25,
+  "status": "open",
+  "acceptScheduledOrders": true,
+  "closedMessage": "ال���طع��� ���قفول دلوقتي، بس تقدر تحجز طلبك لوقت لاحق.",
+  "paymentMethods": [
+    {
+      "id": "cash",
+      "type": "cash",
+      "nameAr": "كاش عند الاستلا���",
+      "enabled": true,
+      "order": 1,
+      "requiresProof": false,
+      "config": {
+        "changeOptions": [
+          "200",
+          "500",
+          "1000",
+          "other"
+        ]
+      }
+    },
+    {
+      "id": "card_on_delivery",
+      "type": "card_on_delivery",
+      "nameAr": "بطاقة عند الاستلا���",
+      "enabled": true,
+      "order": 2,
+      "requiresProof": false,
+      "config": {
+        "visa": true,
+        "mastercard": true,
+        "meeza": true,
+        "contactless": true,
+        "machineNote": "���اكينة الدفع هتكون ���ع ���ندوب التوصيل"
+      }
+    },
+    {
+      "id": "instapay",
+      "type": "instapay",
+      "nameAr": "إنستا باي",
+      "enabled": true,
+      "order": 3,
+      "requiresProof": true,
+      "instructions": "حوّل ال���بلغ على إنستا باي وابعت صورة التحويل ���ع الطلب على واتساب",
+      "config": {
+        "beneficiaryName": "Alef Salad",
+        "ipa": "alefsalad@instapay",
+        "phone": "201012345678"
+      }
+    },
+    {
+      "id": "wallet",
+      "type": "mobile_wallet",
+      "nameAr": "���حفظة إلكترونية",
+      "enabled": true,
+      "order": 4,
+      "requiresProof": true,
+      "config": {
+        "wallets": []
+      }
+    },
+    {
+      "id": "meeza",
+      "type": "meeza",
+      "nameAr": "���يزة",
+      "enabled": false,
+      "order": 5,
+      "requiresProof": false,
+      "config": {
+        "qr": false
+      }
+    },
+    {
+      "id": "fawry",
+      "type": "fawry",
+      "nameAr": "فوري",
+      "enabled": false,
+      "order": 6,
+      "requiresProof": false,
+      "config": {
+        "futureIntegration": true
+      }
+    },
+    {
+      "id": "online",
+      "type": "online",
+      "nameAr": "الدفع أونلاين",
+      "enabled": false,
+      "order": 7,
+      "requiresProof": true,
+      "config": {}
+    }
+  ],
+  "wallets": [
+    {
+      "id": "vodafone-cash",
+      "nameAr": "Vodafone Cash",
+      "operatorAr": "فودافون",
+      "enabled": true,
+      "requiresProof": true
+    },
+    {
+      "id": "orange-cash",
+      "nameAr": "Orange Cash",
+      "operatorAr": "أورنج",
+      "enabled": true,
+      "requiresProof": true
+    },
+    {
+      "id": "etisalat-cash",
+      "nameAr": "Etisalat Cash",
+      "operatorAr": "اتصالات",
+      "enabled": true,
+      "requiresProof": true
+    },
+    {
+      "id": "we-pay",
+      "nameAr": "WE Pay",
+      "operatorAr": "WE",
+      "enabled": true,
+      "requiresProof": true
+    }
+  ],
+  "zones": [
+    {
+      "id": "tagamo3-5",
+      "nameAr": "التج���ع الخا���س",
+      "fee": 25,
+      "minimumOrder": 120,
+      "estimatedMinMinutes": 25,
+      "estimatedMaxMinutes": 40,
+      "enabled": true,
+      "freeDeliveryAbove": 400
+    },
+    {
+      "id": "tagamo3-1",
+      "nameAr": "التج���ع الأول",
+      "fee": 30,
+      "minimumOrder": 130,
+      "estimatedMinMinutes": 30,
+      "estimatedMaxMinutes": 45,
+      "enabled": true,
+      "freeDeliveryAbove": 450
+    },
+    {
+      "id": "nasr",
+      "nameAr": "���دينة نصر",
+      "fee": 40,
+      "minimumOrder": 150,
+      "estimatedMinMinutes": 35,
+      "estimatedMaxMinutes": 50,
+      "enabled": true
+    },
+    {
+      "id": "heliopolis",
+      "nameAr": "���صر الجديدة",
+      "fee": 40,
+      "minimumOrder": 150,
+      "estimatedMinMinutes": 35,
+      "estimatedMaxMinutes": 50,
+      "enabled": true
+    },
+    {
+      "id": "maadi",
+      "nameAr": "ال���عادي",
+      "fee": 50,
+      "minimumOrder": 170,
+      "estimatedMinMinutes": 40,
+      "estimatedMaxMinutes": 55,
+      "enabled": true
+    },
+    {
+      "id": "rehab",
+      "nameAr": "الرحاب",
+      "fee": 35,
+      "minimumOrder": 140,
+      "estimatedMinMinutes": 30,
+      "estimatedMaxMinutes": 45,
+      "enabled": true
+    },
+    {
+      "id": "madinaty",
+      "nameAr": "���دينتي",
+      "fee": 45,
+      "minimumOrder": 160,
+      "estimatedMinMinutes": 40,
+      "estimatedMaxMinutes": 55,
+      "enabled": true
+    }
+  ],
+  "coupons": [
+    {
+      "code": "ALEF20",
+      "type": "percent",
+      "value": 20,
+      "maxDiscount": 100,
+      "minimumOrder": 120,
+      "active": true,
+      "firstOrderOnly": true,
+      "areas": []
+    }
+  ],
+  "checkoutMessage": {
+    "title": "طلب جديد ���ن {{restaurantName}}",
+    "intro": "*طلب جديد ���ن {{restaurantName}}*\n\nرق��� الطلب: *{{orderNumber}}*",
+    "outro": "���ن فضلك أكد الطلب ووقت التوصيل",
+    "includeEmojis": false,
+    "includePrices": true,
+    "includeNotes": true,
+    "includeLocation": true,
+    "includePayment": true,
+    "includeCustomerNumber": true,
+    "includeTime": true,
+    "includeCoupon": true,
+    "body": "*طلب جديد ���ن {{restaurantName}}*\n\nرق��� الطلب: *{{orderNumber}}*\nالتاريخ: {{date}}\nالوقت: {{time}}\n\n*بيانات الع���يل*\nالاس���: {{customerName}}\nرق��� ال���وبايل: {{customerPhone}}\n\n*عنوان التوصيل*\n{{address}}\n\n{{locationUrl}}\n\n*الطلب*\n{{items}}\n\n*الحساب*\nال���ج���وع الفرعي: {{subtotal}}\nرسو��� التوصيل: {{deliveryFee}}\nالخص���: {{discount}}\nالإج���الي: *{{total}}*\n\n*طريقة الدفع*\n{{paymentMethod}}\n{{paymentDetails}}\n\n*���يعاد التوصيل*\n{{deliveryTime}}\n\n*���لاحظات*\n{{notes}}\n\n���ن فضلك أكد الطلب ووقت التوصيل"
+  }
+}

@@ -1,0 +1,3065 @@
+{
+  "products": [
+    {
+      "id": "caesar-chicken",
+      "slug": "caesar-chicken-salad",
+      "sku": "CAESAR-CHICKEN",
+      "productType": "standard",
+      "nameAr": "سيزر تشيكن سالاد",
+      "nameEn": "Caesar Chicken Salad",
+      "shortDescriptionAr": "خس كريسبي، فراخ مشوية، جبنة بارميزان، كروتون وصوص سيزر بتاعنا",
+      "fullDescriptionAr": "خس كريسبي، فراخ مشوية، جبنة بارميزان، كروتون وصوص سيزر بتاعنا",
+      "categoryId": "chicken",
+      "basePrice": 185,
+      "images": [
+        {
+          "id": "img-caesar-chicken",
+          "path": "/images/products/unsplash-salad-1.jpg",
+          "alt": "سيزر تشيكن سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-caesar-chicken",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-2",
+          "nameAr": "فراخ مشوية",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-3",
+          "nameAr": "بارميزان",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-4",
+          "nameAr": "كروتون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-5",
+          "nameAr": "صوص سيزر",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "الأكثر طلبًا",
+        "بروتين عالي"
+      ],
+      "calories": 430,
+      "rating": 4.8,
+      "reviewCount": 126,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 0,
+      "createdAt": "2026-07-17T05:17:32.675Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "greek-salad",
+      "slug": "greek-salad",
+      "sku": "GREEK-SALAD",
+      "productType": "standard",
+      "nameAr": "جريك سالاد",
+      "nameEn": "Greek Salad",
+      "shortDescriptionAr": "خيار، طماطم، زيتون، جبنة فيتا، بصل أحمر وصوص ليمون وزيت زيتون",
+      "fullDescriptionAr": "خيار، طماطم، زيتون، جبنة فيتا، بصل أحمر وصوص ليمون وزيت زيتون",
+      "categoryId": "vegan",
+      "basePrice": 145,
+      "images": [
+        {
+          "id": "img-greek-salad",
+          "path": "/images/products/greek-salad.jpg",
+          "alt": "جريك سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-greek-salad",
+      "ingredients": [
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-8",
+          "nameAr": "زيتون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-9",
+          "nameAr": "فيتا",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-10",
+          "nameAr": "بصل أحمر",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "نباتي",
+        "قليل السعرات"
+      ],
+      "calories": 280,
+      "rating": 4.7,
+      "reviewCount": 98,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 1,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "avocado-chicken-bowl",
+      "slug": "avocado-chicken-bowl",
+      "sku": "AVOCADO-CHICKEN-BOWL",
+      "productType": "standard",
+      "nameAr": "أفوكادو تشيكن بول",
+      "nameEn": "Avocado Chicken Bowl",
+      "shortDescriptionAr": "فراخ مشوية، أفوكادو، رز بني، ذرة، خس، طماطم وصوص هاني مسترد",
+      "fullDescriptionAr": "فراخ مشوية، أفوكادو، رز بني، ذرة، خس، طماطم وصوص هاني مسترد",
+      "categoryId": "chicken",
+      "basePrice": 215,
+      "images": [
+        {
+          "id": "img-avocado-chicken-bowl",
+          "path": "/images/products/avocado-chicken-bowl.jpg",
+          "alt": "أفوكادو تشيكن بول",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-avocado-chicken-bowl",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-11",
+          "nameAr": "فراخ",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-13",
+          "nameAr": "رز بني",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-14",
+          "nameAr": "ذرة",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي",
+        "الأكثر طلبًا"
+      ],
+      "calories": 520,
+      "rating": 4.9,
+      "reviewCount": 155,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 2,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "tuna-protein",
+      "slug": "tuna-protein-salad",
+      "sku": "TUNA-PROTEIN",
+      "productType": "standard",
+      "nameAr": "تونة بروتين سالاد",
+      "nameEn": "Tuna Protein Salad",
+      "shortDescriptionAr": "تونة، بيض، فاصوليا، خس، خيار، طماطم وصوص ليمون خفيف",
+      "fullDescriptionAr": "تونة، بيض، فاصوليا، خس، خيار، طماطم وصوص ليمون خفيف",
+      "categoryId": "diet",
+      "basePrice": 195,
+      "images": [
+        {
+          "id": "img-tuna-protein",
+          "path": "/images/products/tuna-protein.jpg",
+          "alt": "تونة بروتين سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-tuna-protein",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-15",
+          "nameAr": "تونة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-16",
+          "nameAr": "بيض",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-17",
+          "nameAr": "فاصوليا",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي",
+        "قليل السعرات",
+        "بدون جلوتين"
+      ],
+      "calories": 360,
+      "rating": 4.6,
+      "reviewCount": 89,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 3,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "salmon-salad",
+      "slug": "salmon-salad",
+      "sku": "SALMON-SALAD",
+      "productType": "standard",
+      "nameAr": "سالمون سالاد",
+      "nameEn": "Salmon Salad",
+      "shortDescriptionAr": "سالمون مشوي، جرجير، أفوكادو، خيار، طماطم شيري وصوص ليمون",
+      "fullDescriptionAr": "سالمون مشوي، جرجير، أفوكادو، خيار، طماطم شيري وصوص ليمون",
+      "categoryId": "seafood",
+      "basePrice": 275,
+      "images": [
+        {
+          "id": "img-salmon-salad",
+          "path": "/images/products/unsplash-veggie-salad.jpg",
+          "alt": "سالمون سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-salmon-salad",
+      "ingredients": [
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-18",
+          "nameAr": "سالمون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-20",
+          "nameAr": "طماطم شيري",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي",
+        "الأكثر طلبًا"
+      ],
+      "calories": 470,
+      "rating": 4.9,
+      "reviewCount": 77,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 4,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "quinoa-vegan",
+      "slug": "quinoa-vegan-bowl",
+      "sku": "QUINOA-VEGAN",
+      "productType": "standard",
+      "nameAr": "كينوا فيجان بول",
+      "nameEn": "Quinoa Vegan Bowl",
+      "shortDescriptionAr": "كينوا، حمص، أفوكادو، خضار فريش، جرجير وصوص طحينة بالليمون",
+      "fullDescriptionAr": "كينوا، حمص، أفوكادو، خضار فريش، جرجير وصوص طحينة بالليمون",
+      "categoryId": "vegan",
+      "basePrice": 175,
+      "images": [
+        {
+          "id": "img-quinoa-vegan",
+          "path": "/images/products/quinoa-vegan.jpg",
+          "alt": "كينوا فيجان بول",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-quinoa-vegan",
+      "ingredients": [
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-21",
+          "nameAr": "كينوا",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-22",
+          "nameAr": "حمص",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-23",
+          "nameAr": "خضار",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان",
+        "قليل السعرات"
+      ],
+      "calories": 390,
+      "rating": 4.7,
+      "reviewCount": 66,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 5,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "roast-beef",
+      "slug": "roast-beef-salad",
+      "sku": "ROAST-BEEF",
+      "productType": "standard",
+      "nameAr": "روست بيف سالاد",
+      "nameEn": "Roast Beef Salad",
+      "shortDescriptionAr": "شرائح روست بيف، خس، مشروم، طماطم شيري، بصل وصوص مسترد",
+      "fullDescriptionAr": "شرائح روست بيف، خس، مشروم، طماطم شيري، بصل وصوص مسترد",
+      "categoryId": "beef",
+      "basePrice": 235,
+      "images": [
+        {
+          "id": "img-roast-beef",
+          "path": "/images/products/roast-beef.jpg",
+          "alt": "روست بيف سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-roast-beef",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-24",
+          "nameAr": "روست بيف",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-25",
+          "nameAr": "مشروم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-26",
+          "nameAr": "بصل",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي"
+      ],
+      "calories": 500,
+      "rating": 4.8,
+      "reviewCount": 84,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 6,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "fattoush-alf",
+      "slug": "fattoush-alf",
+      "sku": "FATTOUSH-ALF",
+      "productType": "standard",
+      "nameAr": "فتوش ألف",
+      "nameEn": "Fattoush Alef",
+      "shortDescriptionAr": "خيار، طماطم، خس، فجل، نعناع، عيش محمص ودبس رمان",
+      "fullDescriptionAr": "خيار، طماطم، خس، فجل، نعناع، عيش محمص ودبس رمان",
+      "categoryId": "vegan",
+      "basePrice": 135,
+      "images": [
+        {
+          "id": "img-fattoush-alf",
+          "path": "/images/products/unsplash-veggie-salad.jpg",
+          "alt": "فتوش ألف",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-fattoush-alf",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-27",
+          "nameAr": "فجل",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-28",
+          "nameAr": "نعناع",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "نباتي",
+        "الأكثر طلبًا"
+      ],
+      "calories": 250,
+      "rating": 4.8,
+      "reviewCount": 141,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 7,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "halloumi",
+      "slug": "halloumi-salad",
+      "sku": "HALLOUMI",
+      "productType": "standard",
+      "nameAr": "حلومي سالاد",
+      "nameEn": "Halloumi Salad",
+      "shortDescriptionAr": "جبنة حلومي مشوية، جرجير، طماطم شيري، خيار وزيتون",
+      "fullDescriptionAr": "جبنة حلومي مشوية، جرجير، طماطم شيري، خيار وزيتون",
+      "categoryId": "vegan",
+      "basePrice": 185,
+      "images": [
+        {
+          "id": "img-halloumi",
+          "path": "/images/products/halloumi.jpg",
+          "alt": "حلومي سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-halloumi",
+      "ingredients": [
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-8",
+          "nameAr": "زيتون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-20",
+          "nameAr": "طماطم شيري",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-29",
+          "nameAr": "حلومي",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي"
+      ],
+      "calories": 410,
+      "rating": 4.6,
+      "reviewCount": 73,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 8,
+      "createdAt": "2026-07-17T05:17:32.676Z",
+      "updatedAt": "2026-07-17T05:17:32.676Z"
+    },
+    {
+      "id": "shrimp-mango",
+      "slug": "shrimp-mango-salad",
+      "sku": "SHRIMP-MANGO",
+      "productType": "standard",
+      "nameAr": "شريمب مانجو سالاد",
+      "nameEn": "Shrimp Mango Salad",
+      "shortDescriptionAr": "جمبري، مانجو، خس، أفوكادو، خيار وصوص سويت تشيلي خفيف",
+      "fullDescriptionAr": "جمبري، مانجو، خس، أفوكادو، خيار وصوص سويت تشيلي خفيف",
+      "categoryId": "seafood",
+      "basePrice": 245,
+      "images": [
+        {
+          "id": "img-shrimp-mango",
+          "path": "/images/products/shrimp-mango.jpg",
+          "alt": "شريمب مانجو سالاد",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-shrimp-mango",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-30",
+          "nameAr": "جمبري",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-31",
+          "nameAr": "مانجو",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "الأكثر طلبًا"
+      ],
+      "calories": 430,
+      "rating": 4.8,
+      "reviewCount": 61,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 9,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "falafel-salad",
+      "slug": "falafel-salad",
+      "sku": "FALAFEL-SALAD",
+      "productType": "standard",
+      "nameAr": "سلطة فلافل",
+      "nameEn": "Falafel Salad",
+      "shortDescriptionAr": "فلافل سخنة، خس، طماطم، خيار، نعناع، طحينة وليمون",
+      "fullDescriptionAr": "فلافل سخنة، خس، طماطم، خيار، نعناع، طحينة وليمون",
+      "categoryId": "vegan",
+      "basePrice": 155,
+      "images": [
+        {
+          "id": "img-falafel-salad",
+          "path": "/images/products/falafel-salad.jpg",
+          "alt": "سلطة فلافل",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-falafel-salad",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-32",
+          "nameAr": "فلافل",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-33",
+          "nameAr": "طحينة",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "نباتي"
+      ],
+      "calories": 380,
+      "rating": 4.6,
+      "reviewCount": 92,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 10,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "shawarma-chicken-salad",
+      "slug": "shawarma-chicken-salad",
+      "sku": "SHAWARMA-CHICKEN-SALAD",
+      "productType": "standard",
+      "nameAr": "سلطة شاورما فراخ",
+      "nameEn": "Chicken Shawarma Salad",
+      "shortDescriptionAr": "شاورما فراخ متبلة، خس، مخلل، طماطم، بصل وصوص ثوم خفيف",
+      "fullDescriptionAr": "شاورما فراخ متبلة، خس، مخلل، طماطم، بصل وصوص ثوم خفيف",
+      "categoryId": "chicken",
+      "basePrice": 205,
+      "images": [
+        {
+          "id": "img-shawarma-chicken-salad",
+          "path": "/images/products/shawarma-chicken.jpg",
+          "alt": "سلطة شاورما فراخ",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-shawarma-chicken-salad",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-26",
+          "nameAr": "بصل",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-34",
+          "nameAr": "شاورما فراخ",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-35",
+          "nameAr": "مخلل",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "الأكثر طلبًا"
+      ],
+      "calories": 490,
+      "rating": 4.8,
+      "reviewCount": 103,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 11,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "bbq-chicken",
+      "slug": "bbq-chicken-salad",
+      "sku": "BBQ-CHICKEN",
+      "productType": "standard",
+      "nameAr": "سلطة فراخ باربكيو",
+      "nameEn": "BBQ Chicken Salad",
+      "shortDescriptionAr": "فراخ باربكيو، خس، ذرة، طماطم شيري، بصل أحمر وصوص باربكيو",
+      "fullDescriptionAr": "فراخ باربكيو، خس، ذرة، طماطم شيري، بصل أحمر وصوص باربكيو",
+      "categoryId": "chicken",
+      "basePrice": 210,
+      "images": [
+        {
+          "id": "img-bbq-chicken",
+          "path": "/images/products/bbq-chicken.jpg",
+          "alt": "سلطة فراخ باربكيو",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-bbq-chicken",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-10",
+          "nameAr": "بصل أحمر",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-14",
+          "nameAr": "ذرة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-20",
+          "nameAr": "طماطم شيري",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-36",
+          "nameAr": "فراخ باربكيو",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي"
+      ],
+      "calories": 470,
+      "rating": 4.7,
+      "reviewCount": 74,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 12,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "smoked-turkey",
+      "slug": "smoked-turkey-salad",
+      "sku": "SMOKED-TURKEY",
+      "productType": "standard",
+      "nameAr": "سلطة تركي مدخن",
+      "nameEn": "Smoked Turkey Salad",
+      "shortDescriptionAr": "تركي مدخن، جرجير، خس، طماطم، خيار، جبنة خفيفة وصوص ليمون",
+      "fullDescriptionAr": "تركي مدخن، جرجير، خس، طماطم، خيار، جبنة خفيفة وصوص ليمون",
+      "categoryId": "diet",
+      "basePrice": 225,
+      "images": [
+        {
+          "id": "img-smoked-turkey",
+          "path": "/images/products/smoked-turkey.jpg",
+          "alt": "سلطة تركي مدخن",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-smoked-turkey",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-37",
+          "nameAr": "تركي مدخن",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "قليل السعرات",
+        "بروتين عالي"
+      ],
+      "calories": 410,
+      "rating": 4.5,
+      "reviewCount": 58,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 13,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "beet-feta",
+      "slug": "beet-feta-salad",
+      "sku": "BEET-FETA",
+      "productType": "standard",
+      "nameAr": "سلطة بنجر وفيتا",
+      "nameEn": "Beetroot Feta Salad",
+      "shortDescriptionAr": "بنجر مشوي، فيتا، جرجير، لوز محمص، وخط ليمون خفيف",
+      "fullDescriptionAr": "بنجر مشوي، فيتا، جرجير، لوز محمص، وخط ليمون خفيف",
+      "categoryId": "vegan",
+      "basePrice": 165,
+      "images": [
+        {
+          "id": "img-beet-feta",
+          "path": "/images/products/beet-feta.jpg",
+          "alt": "سلطة بنجر وفيتا",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-beet-feta",
+      "ingredients": [
+        {
+          "id": "ing-9",
+          "nameAr": "فيتا",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-38",
+          "nameAr": "بنجر",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-39",
+          "nameAr": "لوز",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-40",
+          "nameAr": "ليمون",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "قليل السعرات",
+        "نباتي"
+      ],
+      "calories": 300,
+      "rating": 4.6,
+      "reviewCount": 69,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 14,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "hummus-veggies",
+      "slug": "hummus-veggies-salad",
+      "sku": "HUMMUS-VEGGIES",
+      "productType": "standard",
+      "nameAr": "سلطة حمص وخضار",
+      "nameEn": "Hummus & Veggies Salad",
+      "shortDescriptionAr": "حمص كريمي، خيار، طماطم، جزر، فلفل ألوان ونعناع",
+      "fullDescriptionAr": "حمص كريمي، خيار، طماطم، جزر، فلفل ألوان ونعناع",
+      "categoryId": "vegan",
+      "basePrice": 150,
+      "images": [
+        {
+          "id": "img-hummus-veggies",
+          "path": "/images/products/hummus-veggies.jpg",
+          "alt": "سلطة حمص وخضار",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-hummus-veggies",
+      "ingredients": [
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-22",
+          "nameAr": "حمص",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-41",
+          "nameAr": "جزر",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-42",
+          "nameAr": "فلفل ألوان",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان",
+        "بدون جلوتين"
+      ],
+      "calories": 340,
+      "rating": 4.5,
+      "reviewCount": 88,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 15,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "cold-pasta",
+      "slug": "cold-pasta-salad",
+      "sku": "COLD-PASTA",
+      "productType": "standard",
+      "nameAr": "سلطة باستا باردة",
+      "nameEn": "Cold Pasta Salad",
+      "shortDescriptionAr": "مكرونة باردة، ذرة، زيتون، طماطم شيري، فلفل ألوان وصوص زبادي",
+      "fullDescriptionAr": "مكرونة باردة، ذرة، زيتون، طماطم شيري، فلفل ألوان وصوص زبادي",
+      "categoryId": "diet",
+      "basePrice": 160,
+      "images": [
+        {
+          "id": "img-cold-pasta",
+          "path": "/images/products/cold-pasta.jpg",
+          "alt": "سلطة باستا باردة",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-cold-pasta",
+      "ingredients": [
+        {
+          "id": "ing-8",
+          "nameAr": "زيتون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-14",
+          "nameAr": "ذرة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-20",
+          "nameAr": "طماطم شيري",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-42",
+          "nameAr": "فلفل ألوان",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-43",
+          "nameAr": "مكرونة",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 450,
+      "rating": 4.4,
+      "reviewCount": 51,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 16,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "tuna-corn",
+      "slug": "tuna-corn-salad",
+      "sku": "TUNA-CORN",
+      "productType": "standard",
+      "nameAr": "سلطة تونة وذرة",
+      "nameEn": "Tuna Corn Salad",
+      "shortDescriptionAr": "تونة، ذرة، خس، خيار، طماطم، بصل أحمر وصوص ليمون",
+      "fullDescriptionAr": "تونة، ذرة، خس، خيار، طماطم، بصل أحمر وصوص ليمون",
+      "categoryId": "diet",
+      "basePrice": 188,
+      "images": [
+        {
+          "id": "img-tuna-corn",
+          "path": "/images/products/tuna-corn.jpg",
+          "alt": "سلطة تونة وذرة",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-tuna-corn",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-7",
+          "nameAr": "طماطم",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-14",
+          "nameAr": "ذرة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-15",
+          "nameAr": "تونة",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي",
+        "قليل السعرات"
+      ],
+      "calories": 370,
+      "rating": 4.6,
+      "reviewCount": 80,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 17,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "high-protein",
+      "slug": "high-protein-salad",
+      "sku": "HIGH-PROTEIN",
+      "productType": "standard",
+      "nameAr": "سلطة بروتين عالية",
+      "nameEn": "High Protein Salad",
+      "shortDescriptionAr": "فراخ، بيض، تونة، خس، أفوكادو، بذور وصوص خفيف",
+      "fullDescriptionAr": "فراخ، بيض، تونة، خس، أفوكادو، بذور وصوص خفيف",
+      "categoryId": "diet",
+      "basePrice": 235,
+      "images": [
+        {
+          "id": "img-high-protein",
+          "path": "/images/products/high-protein.jpg",
+          "alt": "سلطة بروتين عالية",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-high-protein",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-11",
+          "nameAr": "فراخ",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-15",
+          "nameAr": "تونة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-16",
+          "nameAr": "بيض",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "بروتين عالي",
+        "الأكثر طلبًا"
+      ],
+      "calories": 540,
+      "rating": 4.9,
+      "reviewCount": 112,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 18,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "low-carb",
+      "slug": "low-carb-salad",
+      "sku": "LOW-CARB",
+      "productType": "standard",
+      "nameAr": "سلطة قليلة الكربوهيدرات",
+      "nameEn": "Low Carb Salad",
+      "shortDescriptionAr": "خس، جرجير، فراخ، أفوكادو، خيار، زيت زيتون ولمون",
+      "fullDescriptionAr": "خس، جرجير، فراخ، أفوكادو، خيار، زيت زيتون ولمون",
+      "categoryId": "diet",
+      "basePrice": 205,
+      "images": [
+        {
+          "id": "img-low-carb",
+          "path": "/images/products/low-carb.jpg",
+          "alt": "سلطة قليلة الكربوهيدرات",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-low-carb",
+      "ingredients": [
+        {
+          "id": "ing-1",
+          "nameAr": "خس",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-11",
+          "nameAr": "فراخ",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "قليل السعرات",
+        "بدون جلوتين"
+      ],
+      "calories": 310,
+      "rating": 4.7,
+      "reviewCount": 97,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 19,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "keto",
+      "slug": "keto-salad",
+      "sku": "KETO",
+      "productType": "standard",
+      "nameAr": "سلطة كيتو",
+      "nameEn": "Keto Salad",
+      "shortDescriptionAr": "جرجير، أفوكادو، بيض، جبنة، زيت زيتون ومكسرات",
+      "fullDescriptionAr": "جرجير، أفوكادو، بيض، جبنة، زيت زيتون ومكسرات",
+      "categoryId": "diet",
+      "basePrice": 225,
+      "images": [
+        {
+          "id": "img-keto",
+          "path": "/images/products/keto.jpg",
+          "alt": "سلطة كيتو",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-keto",
+      "ingredients": [
+        {
+          "id": "ing-12",
+          "nameAr": "أفوكادو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-16",
+          "nameAr": "بيض",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-19",
+          "nameAr": "جرجير",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-44",
+          "nameAr": "جبنة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-45",
+          "nameAr": "زيت زيتون",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "كيتو",
+        "قليل السعرات"
+      ],
+      "calories": 360,
+      "rating": 4.6,
+      "reviewCount": 72,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 20,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "fruit-salad",
+      "slug": "fruit-salad",
+      "sku": "FRUIT-SALAD",
+      "productType": "standard",
+      "nameAr": "سلطة فواكه",
+      "nameEn": "Fruit Salad",
+      "shortDescriptionAr": "فواكه موسمية فريش مع ليمون ولمسة عسل خفيفة",
+      "fullDescriptionAr": "فواكه موسمية فريش مع ليمون ولمسة عسل خفيفة",
+      "categoryId": "dessert",
+      "basePrice": 140,
+      "images": [
+        {
+          "id": "img-fruit-salad",
+          "path": "/images/products/fruit-salad.jpg",
+          "alt": "سلطة فواكه",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-fruit-salad",
+      "ingredients": [
+        {
+          "id": "ing-31",
+          "nameAr": "مانجو",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-46",
+          "nameAr": "تفاح",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-47",
+          "nameAr": "فراولة",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-48",
+          "nameAr": "عنب",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-49",
+          "nameAr": "كيوي",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "نباتي",
+        "قليل السعرات"
+      ],
+      "calories": 220,
+      "rating": 4.5,
+      "reviewCount": 49,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 21,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "build-salad",
+      "slug": "build-your-salad",
+      "sku": "BUILD-SALAD",
+      "productType": "build_your_own",
+      "nameAr": "اعمل سلطتك",
+      "nameEn": "Build Your Salad",
+      "shortDescriptionAr": "ابدأ من الصفر واختار الحجم والبنات والبروتين والصلصة",
+      "fullDescriptionAr": "ابدأ من الصفر واختار الحجم والبنات والبروتين والصلصة",
+      "categoryId": "build",
+      "basePrice": 0,
+      "images": [
+        {
+          "id": "img-build-salad",
+          "path": "/images/products/build-salad.jpg",
+          "alt": "اعمل سلطتك",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-build-salad",
+      "ingredients": [
+        {
+          "id": "ing-50",
+          "nameAr": "حسب اختياراتك",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "الأكثر طلبًا"
+      ],
+      "calories": 0,
+      "rating": 5,
+      "reviewCount": 0,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 22,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "water",
+      "slug": "bottled-water",
+      "sku": "WATER",
+      "productType": "standard",
+      "nameAr": "مياه معدنية",
+      "nameEn": "Bottled Water",
+      "shortDescriptionAr": "مياه باردة منعشة",
+      "fullDescriptionAr": "مياه باردة منعشة",
+      "categoryId": "drinks",
+      "basePrice": 20,
+      "images": [
+        {
+          "id": "img-water",
+          "path": "/images/products/water.jpg",
+          "alt": "مياه معدنية",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-water",
+      "ingredients": [
+        {
+          "id": "ing-51",
+          "nameAr": "مياه معدنية",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 0,
+      "rating": 4.8,
+      "reviewCount": 14,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 23,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "sparkling-water",
+      "slug": "sparkling-water",
+      "sku": "SPARKLING-WATER",
+      "productType": "standard",
+      "nameAr": "مياه غازية",
+      "nameEn": "Sparkling Water",
+      "shortDescriptionAr": "فقاعات خفيفة ومنعشة",
+      "fullDescriptionAr": "فقاعات خفيفة ومنعشة",
+      "categoryId": "drinks",
+      "basePrice": 25,
+      "images": [
+        {
+          "id": "img-sparkling-water",
+          "path": "/images/products/sparkling-water.jpg",
+          "alt": "مياه غازية",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-sparkling-water",
+      "ingredients": [
+        {
+          "id": "ing-52",
+          "nameAr": "مياه غازية",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 0,
+      "rating": 4.7,
+      "reviewCount": 12,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 24,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "orange-juice",
+      "slug": "fresh-orange-juice",
+      "sku": "ORANGE-JUICE",
+      "productType": "standard",
+      "nameAr": "عصير برتقال فريش",
+      "nameEn": "Fresh Orange Juice",
+      "shortDescriptionAr": "عصير طبيعي فريش من غير إضافات",
+      "fullDescriptionAr": "عصير طبيعي فريش من غير إضافات",
+      "categoryId": "drinks",
+      "basePrice": 55,
+      "images": [
+        {
+          "id": "img-orange-juice",
+          "path": "/images/products/orange-juice.jpg",
+          "alt": "عصير برتقال فريش",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-orange-juice",
+      "ingredients": [
+        {
+          "id": "ing-53",
+          "nameAr": "برتقال",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان"
+      ],
+      "calories": 120,
+      "rating": 4.8,
+      "reviewCount": 28,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 25,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "mango-juice",
+      "slug": "mango-juice",
+      "sku": "MANGO-JUICE",
+      "productType": "standard",
+      "nameAr": "عصير مانجو",
+      "nameEn": "Mango Juice",
+      "shortDescriptionAr": "مانجو تقيلة وطعمها حلو طبيعي",
+      "fullDescriptionAr": "مانجو تقيلة وطعمها حلو طبيعي",
+      "categoryId": "drinks",
+      "basePrice": 58,
+      "images": [
+        {
+          "id": "img-mango-juice",
+          "path": "/images/products/mango-juice.jpg",
+          "alt": "عصير مانجو",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-mango-juice",
+      "ingredients": [
+        {
+          "id": "ing-31",
+          "nameAr": "مانجو",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان"
+      ],
+      "calories": 140,
+      "rating": 4.7,
+      "reviewCount": 22,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 26,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "mint-lemon",
+      "slug": "lemon-mint",
+      "sku": "MINT-LEMON",
+      "productType": "standard",
+      "nameAr": "ليمون بالنعناع",
+      "nameEn": "Lemon Mint",
+      "shortDescriptionAr": "ليمون منعش بالنعناع المثلج",
+      "fullDescriptionAr": "ليمون منعش بالنعناع المثلج",
+      "categoryId": "drinks",
+      "basePrice": 42,
+      "images": [
+        {
+          "id": "img-mint-lemon",
+          "path": "/images/products/lemon-mint.jpg",
+          "alt": "ليمون بالنعناع",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-mint-lemon",
+      "ingredients": [
+        {
+          "id": "ing-28",
+          "nameAr": "نعناع",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-40",
+          "nameAr": "ليمون",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان"
+      ],
+      "calories": 60,
+      "rating": 4.9,
+      "reviewCount": 35,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 27,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "iced-peach-tea",
+      "slug": "iced-peach-tea",
+      "sku": "ICED-PEACH-TEA",
+      "productType": "standard",
+      "nameAr": "آيس تي خوخ",
+      "nameEn": "Iced Peach Tea",
+      "shortDescriptionAr": "شاي خوخ بارد ومنعش",
+      "fullDescriptionAr": "شاي خوخ بارد ومنعش",
+      "categoryId": "drinks",
+      "basePrice": 45,
+      "images": [
+        {
+          "id": "img-iced-peach-tea",
+          "path": "/images/products/iced-peach-tea.jpg",
+          "alt": "آيس تي خوخ",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-iced-peach-tea",
+      "ingredients": [
+        {
+          "id": "ing-54",
+          "nameAr": "شاي",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-55",
+          "nameAr": "خوخ",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 85,
+      "rating": 4.5,
+      "reviewCount": 19,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 28,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "iced-lemon-tea",
+      "slug": "iced-lemon-tea",
+      "sku": "ICED-LEMON-TEA",
+      "productType": "standard",
+      "nameAr": "آيس تي ليمون",
+      "nameEn": "Iced Lemon Tea",
+      "shortDescriptionAr": "شاي بليمون على تلج",
+      "fullDescriptionAr": "شاي بليمون على تلج",
+      "categoryId": "drinks",
+      "basePrice": 45,
+      "images": [
+        {
+          "id": "img-iced-lemon-tea",
+          "path": "/images/products/iced-lemon-tea.jpg",
+          "alt": "آيس تي ليمون",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-iced-lemon-tea",
+      "ingredients": [
+        {
+          "id": "ing-40",
+          "nameAr": "ليمون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-54",
+          "nameAr": "شاي",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 75,
+      "rating": 4.4,
+      "reviewCount": 17,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 29,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "cola",
+      "slug": "cola",
+      "sku": "COLA",
+      "productType": "standard",
+      "nameAr": "كولا",
+      "nameEn": "Cola",
+      "shortDescriptionAr": "مشروب غازي كلاسيك",
+      "fullDescriptionAr": "مشروب غازي كلاسيك",
+      "categoryId": "drinks",
+      "basePrice": 32,
+      "images": [
+        {
+          "id": "img-cola",
+          "path": "/images/products/cola.jpg",
+          "alt": "كولا",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-cola",
+      "ingredients": [
+        {
+          "id": "ing-56",
+          "nameAr": "كولا",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 140,
+      "rating": 4.2,
+      "reviewCount": 11,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 30,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "cola-zero",
+      "slug": "cola-zero",
+      "sku": "COLA-ZERO",
+      "productType": "standard",
+      "nameAr": "كولا زيرو",
+      "nameEn": "Cola Zero",
+      "shortDescriptionAr": "كولا من غير سكر",
+      "fullDescriptionAr": "كولا من غير سكر",
+      "categoryId": "drinks",
+      "basePrice": 32,
+      "images": [
+        {
+          "id": "img-cola-zero",
+          "path": "/images/products/cola-zero.jpg",
+          "alt": "كولا زيرو",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-cola-zero",
+      "ingredients": [
+        {
+          "id": "ing-57",
+          "nameAr": "كولا زيرو",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "قليل السعرات"
+      ],
+      "calories": 1,
+      "rating": 4.3,
+      "reviewCount": 9,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 31,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "sprite",
+      "slug": "sprite",
+      "sku": "SPRITE",
+      "productType": "standard",
+      "nameAr": "سبرايت",
+      "nameEn": "Sprite",
+      "shortDescriptionAr": "ليمون لايم منعش",
+      "fullDescriptionAr": "ليمون لايم منعش",
+      "categoryId": "drinks",
+      "basePrice": 32,
+      "images": [
+        {
+          "id": "img-sprite",
+          "path": "/images/products/sprite.jpg",
+          "alt": "سبرايت",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-sprite",
+      "ingredients": [
+        {
+          "id": "ing-58",
+          "nameAr": "سبرايت",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [],
+      "calories": 130,
+      "rating": 4.3,
+      "reviewCount": 10,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 32,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "green-detox",
+      "slug": "green-detox-drink",
+      "sku": "GREEN-DETOX",
+      "productType": "standard",
+      "nameAr": "مشروب ديتوكس أخضر",
+      "nameEn": "Green Detox Drink",
+      "shortDescriptionAr": "خيار، تفاح أخضر، نعناع، ليمون وسماوث صحي",
+      "fullDescriptionAr": "خيار، تفاح أخضر، نعناع، ليمون وسماوث صحي",
+      "categoryId": "drinks",
+      "basePrice": 52,
+      "images": [
+        {
+          "id": "img-green-detox",
+          "path": "/images/products/unsplash-veggie-salad.jpg",
+          "alt": "مشروب ديتوكس أخضر",
+          "source": "generated"
+        }
+      ],
+      "primaryImageId": "img-green-detox",
+      "ingredients": [
+        {
+          "id": "ing-6",
+          "nameAr": "خيار",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-28",
+          "nameAr": "نعناع",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-40",
+          "nameAr": "ليمون",
+          "available": true,
+          "removable": true
+        },
+        {
+          "id": "ing-59",
+          "nameAr": "تفاح أخضر",
+          "available": true,
+          "removable": true
+        }
+      ],
+      "tags": [
+        "فيجان",
+        "قليل السعرات"
+      ],
+      "calories": 90,
+      "rating": 4.6,
+      "reviewCount": 23,
+      "modifierGroupIds": [],
+      "available": true,
+      "soldOut": false,
+      "featured": false,
+      "bestSeller": false,
+      "slugAliases": [],
+      "sortOrder": 33,
+      "createdAt": "2026-07-17T05:17:32.677Z",
+      "updatedAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "prd-2e122630",
+      "slug": "premium-avocado-salad",
+      "sku": "PRM-AVO-001",
+      "productType": "standard",
+      "nameAr": "???? ??????? ???????",
+      "nameEn": "Premium Avocado Salad",
+      "shortDescriptionAr": "???? ?????? ???????? ?? ??????? ????? ???? ???? ?????",
+      "fullDescriptionAr": "???? ?????? ???????? ?? ??????? ????? ???? ???? ?????",
+      "categoryId": "chicken",
+      "basePrice": 190,
+      "oldPrice": 220,
+      "promotionalPrice": 190,
+      "badgeAr": "?????? ?????",
+      "images": [
+        {
+          "id": "main",
+          "path": "/images/products/avocado-chicken-bowl.jpg",
+          "alt": "???? ??????? ???????",
+          "source": "generated"
+        }
+      ],
+      "ingredients": [],
+      "tags": [
+        "????",
+        "?????? ?????"
+      ],
+      "calories": 420,
+      "rating": 4.9,
+      "reviewCount": 1,
+      "modifierGroupIds": [
+        "mod-92516ee0",
+        "mod-9fbaad87"
+      ],
+      "available": true,
+      "soldOut": false,
+      "featured": true,
+      "bestSeller": true,
+      "slugAliases": [],
+      "sortOrder": 34,
+      "createdAt": "2026-07-17T14:24:42.357Z",
+      "updatedAt": "2026-07-17T14:25:49.354Z"
+    }
+  ],
+  "categories": [
+    {
+      "enabled": true,
+      "featured": true,
+      "id": "top",
+      "slug": "top",
+      "nameAr": "الأكثر طلبًا",
+      "nameEn": "الأكثر طلبًا",
+      "descriptionAr": "أكتر سلطات الناس بتكررها",
+      "icon": "🔥",
+      "sortOrder": 0
+    },
+    {
+      "enabled": true,
+      "featured": true,
+      "id": "chicken",
+      "slug": "chicken",
+      "nameAr": "سلطات الدجاج",
+      "nameEn": "سلطات الدجاج",
+      "descriptionAr": "اختيارات مشبعة وفريش",
+      "icon": "🍗",
+      "sortOrder": 1
+    },
+    {
+      "enabled": true,
+      "featured": true,
+      "id": "beef",
+      "slug": "beef",
+      "nameAr": "سلطات اللحمة",
+      "nameEn": "سلطات اللحمة",
+      "descriptionAr": "بروتين غني وطعم واضح",
+      "icon": "🥩",
+      "sortOrder": 2
+    },
+    {
+      "enabled": true,
+      "featured": true,
+      "id": "seafood",
+      "slug": "seafood",
+      "nameAr": "سلطات السي فود",
+      "nameEn": "سلطات السي فود",
+      "descriptionAr": "خيارات خفيفة وطعم راقي",
+      "icon": "🦐",
+      "sortOrder": 3
+    },
+    {
+      "enabled": true,
+      "featured": true,
+      "id": "vegan",
+      "slug": "vegan",
+      "nameAr": "سلطات نباتية",
+      "nameEn": "سلطات نباتية",
+      "descriptionAr": "فريش ولذيذة من غير منتجات حيوانية",
+      "icon": "🥬",
+      "sortOrder": 4
+    },
+    {
+      "enabled": true,
+      "featured": false,
+      "id": "diet",
+      "slug": "diet",
+      "nameAr": "سلطات دايت",
+      "nameEn": "سلطات دايت",
+      "descriptionAr": "خفيفة ومناسبة للروتين الصحي",
+      "icon": "⚖️",
+      "sortOrder": 5
+    },
+    {
+      "enabled": true,
+      "featured": false,
+      "id": "build",
+      "slug": "build",
+      "nameAr": "اعمل سلطتك",
+      "nameEn": "اعمل سلطتك",
+      "descriptionAr": "اختار كل حاجة بنفسك",
+      "icon": "🧩",
+      "sortOrder": 6
+    },
+    {
+      "enabled": true,
+      "featured": false,
+      "id": "extras",
+      "slug": "extras",
+      "nameAr": "إضافات",
+      "nameEn": "إضافات",
+      "descriptionAr": "زوّد الطلب اللي ناقصه",
+      "icon": "➕",
+      "sortOrder": 7
+    },
+    {
+      "enabled": true,
+      "featured": false,
+      "id": "dessert",
+      "slug": "dessert",
+      "nameAr": "حلويات خفيفة",
+      "nameEn": "حلويات خفيفة",
+      "descriptionAr": "ختام بسيط من غير تقيل",
+      "icon": "🍓",
+      "sortOrder": 8
+    },
+    {
+      "enabled": true,
+      "featured": false,
+      "id": "drinks",
+      "slug": "drinks",
+      "nameAr": "مشروبات",
+      "nameEn": "مشروبات",
+      "descriptionAr": "كلها halal ومنعشة",
+      "icon": "🥤",
+      "sortOrder": 9
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "ing-1",
+      "nameAr": "خس",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-2",
+      "nameAr": "فراخ مشوية",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-3",
+      "nameAr": "بارميزان",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-4",
+      "nameAr": "كروتون",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-5",
+      "nameAr": "صوص سيزر",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-6",
+      "nameAr": "خيار",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-7",
+      "nameAr": "طماطم",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-8",
+      "nameAr": "زيتون",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-9",
+      "nameAr": "فيتا",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-10",
+      "nameAr": "بصل أحمر",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-11",
+      "nameAr": "فراخ",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-12",
+      "nameAr": "أفوكادو",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-13",
+      "nameAr": "رز بني",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-14",
+      "nameAr": "ذرة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-15",
+      "nameAr": "تونة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-16",
+      "nameAr": "بيض",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-17",
+      "nameAr": "فاصوليا",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-18",
+      "nameAr": "سالمون",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-19",
+      "nameAr": "جرجير",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-20",
+      "nameAr": "طماطم شيري",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-21",
+      "nameAr": "كينوا",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-22",
+      "nameAr": "حمص",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-23",
+      "nameAr": "خضار",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-24",
+      "nameAr": "روست بيف",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-25",
+      "nameAr": "مشروم",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-26",
+      "nameAr": "بصل",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-27",
+      "nameAr": "فجل",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-28",
+      "nameAr": "نعناع",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-29",
+      "nameAr": "حلومي",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-30",
+      "nameAr": "جمبري",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-31",
+      "nameAr": "مانجو",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-32",
+      "nameAr": "فلافل",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-33",
+      "nameAr": "طحينة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-34",
+      "nameAr": "شاورما فراخ",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-35",
+      "nameAr": "مخلل",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-36",
+      "nameAr": "فراخ باربكيو",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-37",
+      "nameAr": "تركي مدخن",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-38",
+      "nameAr": "بنجر",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-39",
+      "nameAr": "لوز",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-40",
+      "nameAr": "ليمون",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-41",
+      "nameAr": "جزر",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-42",
+      "nameAr": "فلفل ألوان",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-43",
+      "nameAr": "مكرونة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-44",
+      "nameAr": "جبنة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-45",
+      "nameAr": "زيت زيتون",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-46",
+      "nameAr": "تفاح",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-47",
+      "nameAr": "فراولة",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-48",
+      "nameAr": "عنب",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-49",
+      "nameAr": "كيوي",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-50",
+      "nameAr": "حسب اختياراتك",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-51",
+      "nameAr": "مياه معدنية",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-52",
+      "nameAr": "مياه غازية",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-53",
+      "nameAr": "برتقال",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-54",
+      "nameAr": "شاي",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-55",
+      "nameAr": "خوخ",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-56",
+      "nameAr": "كولا",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-57",
+      "nameAr": "كولا زيرو",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-58",
+      "nameAr": "سبرايت",
+      "available": true,
+      "removable": true
+    },
+    {
+      "id": "ing-59",
+      "nameAr": "تفاح أخضر",
+      "available": true,
+      "removable": true
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "mod-92516ee0",
+      "nameAr": "????? ?????",
+      "nameEn": "Choose Size",
+      "descriptionAr": "????? ??? ??????",
+      "type": "single",
+      "required": true,
+      "minSelections": 1,
+      "maxSelections": 1,
+      "options": [
+        {
+          "id": "size-normal",
+          "nameAr": "????",
+          "nameEn": "Regular",
+          "price": 0,
+          "available": true
+        },
+        {
+          "id": "size-large",
+          "nameAr": "????",
+          "nameEn": "Large",
+          "price": 40,
+          "available": true
+        }
+      ],
+      "enabled": true,
+      "sortOrder": 1,
+      "productIds": []
+    },
+    {
+      "id": "mod-9fbaad87",
+      "nameAr": "??????",
+      "nameEn": "Extras",
+      "descriptionAr": "?????? ????????",
+      "type": "multiple",
+      "required": false,
+      "minSelections": 0,
+      "maxSelections": 3,
+      "options": [
+        {
+          "id": "extra-avocado",
+          "nameAr": "??????? ?????",
+          "nameEn": "Extra Avocado",
+          "price": 35,
+          "available": true
+        },
+        {
+          "id": "extra-chicken",
+          "nameAr": "???? ?????",
+          "nameEn": "Extra Chicken",
+          "price": 50,
+          "available": true
+        },
+        {
+          "id": "extra-feta",
+          "nameAr": "???? ????",
+          "nameEn": "Feta Cheese",
+          "price": 25,
+          "available": true
+        }
+      ],
+      "enabled": true,
+      "sortOrder": 2,
+      "productIds": []
+    }
+  ],
+  "images": [
+    {
+      "id": "img-7f128747",
+      "path": "/uploads/products/avocado-chicken-bowl-898dfa.webp",
+      "originalName": "avocado-chicken-bowl.jpg",
+      "source": "upload",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/webp",
+      "size": 200092,
+      "createdAt": "2026-07-17T14:24:41.775Z"
+    },
+    {
+      "id": "img-74fe55d2",
+      "path": "/uploads/products/avocado-chicken-bowl-b30784.webp",
+      "originalName": "avocado-chicken-bowl.jpg",
+      "source": "upload",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/webp",
+      "size": 200092,
+      "createdAt": "2026-07-17T14:23:56.609Z"
+    },
+    {
+      "id": "img-c47e5176",
+      "path": "/uploads/products/avocado-chicken-bowl-eb6191.webp",
+      "originalName": "avocado-chicken-bowl.jpg",
+      "source": "upload",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/webp",
+      "size": 200092,
+      "createdAt": "2026-07-17T14:23:02.224Z"
+    },
+    {
+      "id": "img-e220bb39",
+      "path": "/uploads/products/avocado-chicken-bowl-c4047f.webp",
+      "originalName": "avocado-chicken-bowl.jpg",
+      "source": "upload",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/webp",
+      "size": 200092,
+      "createdAt": "2026-07-17T14:20:22.510Z"
+    },
+    {
+      "id": "img-caesar-chicken",
+      "path": "/images/products/unsplash-salad-1.jpg",
+      "originalName": "سيزر تشيكن سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-greek-salad",
+      "path": "/images/products/greek-salad.jpg",
+      "originalName": "جريك سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-avocado-chicken-bowl",
+      "path": "/images/products/avocado-chicken-bowl.jpg",
+      "originalName": "أفوكادو تشيكن بول",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-tuna-protein",
+      "path": "/images/products/tuna-protein.jpg",
+      "originalName": "تونة بروتين سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-salmon-salad",
+      "path": "/images/products/unsplash-veggie-salad.jpg",
+      "originalName": "سالمون سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-quinoa-vegan",
+      "path": "/images/products/quinoa-vegan.jpg",
+      "originalName": "كينوا فيجان بول",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-roast-beef",
+      "path": "/images/products/roast-beef.jpg",
+      "originalName": "روست بيف سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-fattoush-alf",
+      "path": "/images/products/unsplash-veggie-salad.jpg",
+      "originalName": "فتوش ألف",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-halloumi",
+      "path": "/images/products/halloumi.jpg",
+      "originalName": "حلومي سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-shrimp-mango",
+      "path": "/images/products/shrimp-mango.jpg",
+      "originalName": "شريمب مانجو سالاد",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-falafel-salad",
+      "path": "/images/products/falafel-salad.jpg",
+      "originalName": "سلطة فلافل",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-shawarma-chicken-salad",
+      "path": "/images/products/shawarma-chicken.jpg",
+      "originalName": "سلطة شاورما فراخ",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-bbq-chicken",
+      "path": "/images/products/bbq-chicken.jpg",
+      "originalName": "سلطة فراخ باربكيو",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-smoked-turkey",
+      "path": "/images/products/smoked-turkey.jpg",
+      "originalName": "سلطة تركي مدخن",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-beet-feta",
+      "path": "/images/products/beet-feta.jpg",
+      "originalName": "سلطة بنجر وفيتا",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-hummus-veggies",
+      "path": "/images/products/hummus-veggies.jpg",
+      "originalName": "سلطة حمص وخضار",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-cold-pasta",
+      "path": "/images/products/cold-pasta.jpg",
+      "originalName": "سلطة باستا باردة",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-tuna-corn",
+      "path": "/images/products/tuna-corn.jpg",
+      "originalName": "سلطة تونة وذرة",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-high-protein",
+      "path": "/images/products/high-protein.jpg",
+      "originalName": "سلطة بروتين عالية",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-low-carb",
+      "path": "/images/products/low-carb.jpg",
+      "originalName": "سلطة قليلة الكربوهيدرات",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-keto",
+      "path": "/images/products/keto.jpg",
+      "originalName": "سلطة كيتو",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-fruit-salad",
+      "path": "/images/products/fruit-salad.jpg",
+      "originalName": "سلطة فواكه",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-build-salad",
+      "path": "/images/products/build-salad.jpg",
+      "originalName": "اعمل سلطتك",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-water",
+      "path": "/images/products/water.jpg",
+      "originalName": "مياه معدنية",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-sparkling-water",
+      "path": "/images/products/sparkling-water.jpg",
+      "originalName": "مياه غازية",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-orange-juice",
+      "path": "/images/products/orange-juice.jpg",
+      "originalName": "عصير برتقال فريش",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-mango-juice",
+      "path": "/images/products/mango-juice.jpg",
+      "originalName": "عصير مانجو",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-mint-lemon",
+      "path": "/images/products/lemon-mint.jpg",
+      "originalName": "ليمون بالنعناع",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-iced-peach-tea",
+      "path": "/images/products/iced-peach-tea.jpg",
+      "originalName": "آيس تي خوخ",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-iced-lemon-tea",
+      "path": "/images/products/iced-lemon-tea.jpg",
+      "originalName": "آيس تي ليمون",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-cola",
+      "path": "/images/products/cola.jpg",
+      "originalName": "كولا",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-cola-zero",
+      "path": "/images/products/cola-zero.jpg",
+      "originalName": "كولا زيرو",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-sprite",
+      "path": "/images/products/sprite.jpg",
+      "originalName": "سبرايت",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    },
+    {
+      "id": "img-green-detox",
+      "path": "/images/products/unsplash-veggie-salad.jpg",
+      "originalName": "مشروب ديتوكس أخضر",
+      "source": "generated",
+      "width": 1200,
+      "height": 900,
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-17T05:17:32.677Z"
+    }
+  ]
+}

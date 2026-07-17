@@ -27,6 +27,7 @@ export default function AccountPage() {
           </div>
           <div className="mt-4 space-y-2 text-sm">
             <Link href="/checkout" className="block rounded-2xl border px-4 py-3">إضافة عنوان جديد</Link>
+            <Link href="/account/orders" className="block rounded-2xl border px-4 py-3">طلباتي</Link>
             <button type="button" className="block w-full rounded-2xl border px-4 py-3 text-right">تكرار آخر طلب</button>
             <button type="button" className="block w-full rounded-2xl border px-4 py-3 text-right">الكوپنات</button>
             <button type="button" className="block w-full rounded-2xl border px-4 py-3 text-right">تسجيل خروج</button>
@@ -38,7 +39,9 @@ export default function AccountPage() {
             {savedOrders.length === 0 ? <div className="rounded-3xl bg-slate-50 p-5 text-slate-600">مفيش طلبات لسه</div> : savedOrders.map((order) => (
               <div key={order.id} className="rounded-3xl border p-5">
                 <div className="flex justify-between"><span className="font-bold">{order.number}</span><span>{order.status}</span></div>
-                <div className="mt-1 text-sm text-slate-600">{order.addressLabel}</div>
+                <div className="mt-1 text-sm text-slate-600">
+                  {order.address.street} - {order.address.area}
+                </div>
                 <Link href="/track" className="mt-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm">تتبع الطلب</Link>
               </div>
             ))}
@@ -50,4 +53,3 @@ export default function AccountPage() {
     </SiteShell>
   );
 }
-

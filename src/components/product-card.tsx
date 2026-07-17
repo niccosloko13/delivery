@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Heart, Flame, Star, Plus, Tag } from "lucide-react";
 import { Product } from "@/lib/types";
 import { Badge } from "./badge";
 import { SmartImage } from "./smart-image";
 import { formatEGP } from "@/lib/utils";
+import { useAppStore } from "@/store/app-store";
 
 export function ProductCard({ product }: { product: Product }) {
+  const { favorites, toggleFavorite } = useAppStore();
+  const isFavorite = favorites.includes(product.id);
   const discount = product.oldPrice ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0;
 
   return (
@@ -30,12 +35,21 @@ export function ProductCard({ product }: { product: Product }) {
             </div>
             <button
               type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleFavorite(product.id);
+              }}
               className="grid h-10 w-10 place-items-center rounded-full bg-white/95 text-rose-500 shadow-sm transition hover:scale-105"
-              aria-label={`إضافة ${product.nameAr} للمفضلة`}
+              aria-label={isFavorite ? `إزالة ${product.nameAr} من المفضلة` : `إضافة ${product.nameAr} للمفضلة`}
             >
-              <Heart className="h-4 w-4" />
+              <Heart className={`h-4 w-4 ${isFavorite ? "fill-current" : ""}`} />
             </button>
           </div>
+          {discount ? (
+            <div className="absolute bottom-4 right-4 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-900">
+              -{discount}%
+            </div>
+          ) : null}
         </div>
       </Link>
 
@@ -48,7 +62,6 @@ export function ProductCard({ product }: { product: Product }) {
           <div className="shrink-0 text-left">
             <div className="text-xl font-black tracking-tight text-[#123b2b]">{formatEGP(product.price)}</div>
             {product.oldPrice ? <div className="text-xs text-slate-400 line-through">{formatEGP(product.oldPrice)}</div> : null}
-            {discount ? <div className="mt-1 inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900">-{discount}%</div> : null}
           </div>
         </div>
 

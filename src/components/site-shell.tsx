@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Leaf, MapPin, Search, ShoppingBag, Star, User2, Heart } from "lucide-react";
+import { Leaf, MapPin, Search, ShoppingBag, User2, Heart } from "lucide-react";
 import { useAppStore } from "@/store/app-store";
-import { restaurant } from "@/data/catalog";
+import { useRestaurantSettings } from "@/components/settings-provider";
 import { cn, formatEGP } from "@/lib/utils";
 
 const mobileNav = [
@@ -18,6 +18,7 @@ const mobileNav = [
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const { cart, favorites } = useAppStore();
+  const settings = useRestaurantSettings();
   const subtotal = cart.reduce((sum, item) => sum + (item.customPrice ?? 0) * item.quantity, 0);
 
   return (
@@ -29,7 +30,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <Leaf className="h-6 w-6" />
             </div>
             <div className="leading-tight">
-              <div className="font-display text-xl font-bold tracking-tight text-[#123022]">ألف سالاد</div>
+              <div className="font-display text-xl font-bold tracking-tight text-[#123022]">{settings.nameAr}</div>
               <div className="text-xs text-slate-500">Alef Salad</div>
             </div>
           </Link>
@@ -44,7 +45,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
           <div className="hidden items-center gap-2 rounded-[22px] border border-white/70 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm xl:flex">
             <MapPin className="h-4 w-4 text-emerald-700" />
-            <span className="max-w-[280px] truncate">{restaurant.addressAr}</span>
+            <span className="max-w-[280px] truncate">{settings.address}</span>
           </div>
 
           <Link href="/account" className="hidden items-center gap-2 rounded-[22px] border border-white/70 bg-white px-4 py-3 text-sm font-semibold shadow-sm lg:flex">

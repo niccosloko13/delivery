@@ -1,12 +1,26 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import type { Product } from "@/lib/types";
-import { products as catalog } from "@/data/catalog";
+import type { Product, Order, Customer } from "@/lib/types";
+import { defaultCatalogData } from "@/lib/catalog/defaults";
+import type { CatalogProduct } from "@/types/catalog";
 
 export type CartItem = {
   productId: string;
+  nameAr?: string;
   quantity: number;
+  unitPrice?: number;
+  selectedModifiers?: {
+    groupId: string;
+    groupNameAr?: string;
+    optionIds: string[];
+    optionNamesAr?: string[];
+    optionPrice?: number;
+  }[];
+  displaySnapshot?: {
+    nameAr: string;
+    image: string;
+  };
   size?: "عادي" | "كبير";
   base?: string;
   protein?: string[];
@@ -18,31 +32,14 @@ export type CartItem = {
   customPrice?: number;
 };
 
-export type OrderStatus =
-  | "الطلب اتأكد"
-  | "المطعم بيجهز الطلب"
-  | "الطلب خرج للتوصيل"
-  | "الطلب وصل";
-
-export type Order = {
-  id: string;
-  number: string;
-  createdAt: string;
-  status: OrderStatus;
-  items: CartItem[];
-  total: number;
-  addressLabel: string;
-  phone: string;
-  paymentMethod: string;
-};
-
 type State = {
   cart: CartItem[];
   coupon: string;
-  user: { name: string; phone: string; email?: string } | null;
+  user: Customer | null;
   savedOrders: Order[];
   favorites: string[];
   activeOrder: Order | null;
+  products: Product[];
 };
 
 const STORAGE_KEY = "alef-salad-state-v1";
@@ -54,10 +51,28 @@ const defaultState: State = {
   savedOrders: [],
   favorites: [],
   activeOrder: null,
+  products: defaultCatalogData.products.map((product) => ({
+    id: product.id,
+    slug: product.slug,
+    nameAr: product.nameAr,
+    nameEn: product.nameEn,
+    descriptionAr: product.shortDescriptionAr,
+    category: product.categoryId as never,
+    price: product.promotionalPrice ?? product.basePrice,
+    oldPrice: product.oldPrice,
+    image: product.images[0]?.path || "/images/products/product-fallback.jpg",
+    calories: product.calories || 0,
+    rating: product.rating || 0,
+    reviewCount: product.reviewCount || 0,
+    ingredients: product.ingredients.map((ingredient) => ingredient.nameAr),
+    tags: product.tags as never,
+    modifiers: [],
+    available: product.available && !product.soldOut && !product.deletedAt,
+    featured: product.featured,
+  })),
 };
 
 type ContextValue = State & {
-  products: Product[];
   addToCart: (item: CartItem) => void;
   updateCartItem: (index: number, patch: Partial<CartItem>) => void;
   removeFromCart: (index: number) => void;
@@ -89,9 +104,44 @@ export function AppStoreProvider({ children }: { children: React.ReactNode }) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }, [state]);
 
+  useEffect(() => {
+    let mounted = true;
+    void fetch("/api/public/catalog", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((catalog: { products?: CatalogProduct[] }) => {
+        const nextProducts = Array.isArray(catalog.products) ? catalog.products : [];
+        if (!mounted || nextProducts.length === 0) return;
+        setState((prev) => ({
+          ...prev,
+          products: nextProducts.map((product) => ({
+            id: product.id,
+            slug: product.slug,
+            nameAr: product.nameAr,
+            nameEn: product.nameEn,
+            descriptionAr: product.shortDescriptionAr,
+            category: product.categoryId as never,
+            price: product.promotionalPrice ?? product.basePrice,
+            oldPrice: product.oldPrice,
+            image: product.images[0]?.path || "/images/products/product-fallback.jpg",
+            calories: product.calories || 0,
+            rating: product.rating || 0,
+            reviewCount: product.reviewCount || 0,
+            ingredients: product.ingredients.map((ingredient) => ingredient.nameAr),
+            tags: product.tags as never,
+            modifiers: [],
+            available: product.available && !product.soldOut && !product.deletedAt,
+            featured: product.featured,
+          })),
+        }));
+      })
+      .catch(() => null);
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const value = useMemo<ContextValue>(() => ({
     ...state,
-    products: catalog,
     addToCart: (item) =>
       setState((prev) => {
         const existingIndex = prev.cart.findIndex((cartItem) => cartItem.productId === item.productId && JSON.stringify(cartItem) === JSON.stringify(item));
@@ -138,5 +188,5 @@ export function useAppStore() {
 }
 
 export function getProductById(productId: string) {
-  return catalog.find((item) => item.id === productId);
+  return defaultCatalogData.products.find((item) => item.id === productId);
 }

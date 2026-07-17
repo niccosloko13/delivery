@@ -3,7 +3,7 @@ import { getProductById } from "@/store/app-store";
 
 export function calcCartItemPrice(item: CartItem) {
   const product = getProductById(item.productId);
-  const basePrice = item.customPrice ?? product?.price ?? 0;
+  const basePrice = item.customPrice ?? product?.promotionalPrice ?? product?.basePrice ?? 0;
   return basePrice * item.quantity;
 }
 

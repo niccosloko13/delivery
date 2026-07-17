@@ -84,6 +84,10 @@ export default function CheckoutPage() {
 
   const onSubmit = form.handleSubmit(async (values) => {
     if (submitting) return;
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      form.setError("root", { message: "محتاج إنترنت علشان تبعت الطلب" });
+      return;
+    }
     if (cart.length === 0) {
       form.setError("root", { message: "السلة فاضية" });
       return;

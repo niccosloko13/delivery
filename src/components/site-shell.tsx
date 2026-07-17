@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Leaf, MapPin, Search, ShoppingBag, User2, Heart } from "lucide-react";
+import { Heart, Leaf, MapPin, Search, ShoppingBag, User2 } from "lucide-react";
 import { useAppStore } from "@/store/app-store";
 import { useRestaurantSettings } from "@/components/settings-provider";
+import { InstallAppButton } from "@/components/install-app-button";
 import { cn, formatEGP } from "@/lib/utils";
 
 const mobileNav = [
@@ -19,7 +20,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const { cart, favorites } = useAppStore();
   const settings = useRestaurantSettings();
-  const subtotal = cart.reduce((sum, item) => sum + (item.customPrice ?? 0) * item.quantity, 0);
+  const subtotal = cart.reduce((sum, item) => sum + (item.customPrice ?? item.unitPrice ?? 0) * item.quantity, 0);
 
   return (
     <div className="min-h-screen">
@@ -40,6 +41,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <input
               className="w-full bg-transparent text-sm outline-none placeholder:text-slate-400"
               placeholder="دوّر على سلطة، بول، أو مشروب..."
+              aria-label="بحث"
             />
           </div>
 
@@ -58,7 +60,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             {favorites.length}
           </Link>
 
-          <Link href="/cart" className="relative ml-auto flex items-center gap-2 rounded-[22px] bg-[#123b2b] px-4 py-3 text-sm font-bold text-white shadow-elevated">
+          <InstallAppButton />
+
+          <Link
+            href="/cart"
+            className="relative ml-auto flex items-center gap-2 rounded-[22px] bg-[#123b2b] px-4 py-3 text-sm font-bold text-white shadow-elevated"
+          >
             <ShoppingBag className="h-4 w-4" />
             <span>السلة</span>
             <span className="rounded-full bg-white/15 px-2 py-0.5 text-xs">{cart.length}</span>

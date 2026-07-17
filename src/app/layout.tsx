@@ -3,6 +3,7 @@ import { Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 import { AppStoreProvider } from "@/store/app-store";
 import { SettingsProvider } from "@/components/settings-provider";
+import { PwaRegister } from "@/components/pwa-register";
 
 const cairo = Cairo({
   variable: "--font-sans-ar",
@@ -19,7 +20,10 @@ export const metadata: Metadata = {
   title: "ألف سالاد | Alef Salad",
   description: "تجربة delivery premium لسلطات وبولات صحية في القاهرة الجديدة",
   manifest: "/manifest.webmanifest",
-  icons: [{ rel: "icon", url: "/favicon.svg" }],
+  icons: [
+    { rel: "icon", url: "/icons/favicon.png" },
+    { rel: "apple-touch-icon", url: "/icons/apple-touch-icon.png" },
+  ],
 };
 
 export default function RootLayout({
@@ -35,6 +39,7 @@ export default function RootLayout({
       className={`${cairo.variable} ${tajawal.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#f5f1e8] text-slate-900">
+        <PwaRegister />
         <AppStoreProvider>
           <SettingsProvider>{children}</SettingsProvider>
         </AppStoreProvider>

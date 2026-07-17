@@ -3,6 +3,11 @@ import { createAdminSessionCookie } from "@/lib/admin/session";
 
 const attempts = new Map<string, { count: number; resetAt: number }>();
 
+function envValue(name: "ADMIN_USERNAME" | "ADMIN_PASSWORD" | "ADMIN_SESSION_SECRET") {
+  const value = process.env[name]?.trim();
+  return value && value.length > 0 ? value : null;
+}
+
 export async function POST(request: NextRequest) {
   const contentType = request.headers.get("content-type") || "";
   if (!contentType.includes("application/json")) {
@@ -13,17 +18,29 @@ export async function POST(request: NextRequest) {
   const entry = attempts.get(ip);
   const now = Date.now();
   if (entry && entry.resetAt > now && entry.count >= 5) {
-    return NextResponse.json({ ok: false, message: "جرب بعد شوية" }, { status: 429 });
+    return NextResponse.json({ ok: false, message: "محاولات كتير. استنى شوية وجرب تاني" }, { status: 429 });
   }
 
   const body = (await request.json().catch(() => null)) as { username?: string; password?: string } | null;
   const username = body?.username?.trim() ?? "";
-  const password = body?.password ?? "";
-  const expectedUser = process.env.ADMIN_USERNAME;
-  const expectedPass = process.env.ADMIN_PASSWORD;
+  const password = body?.password?.trim() ?? "";
+  const expectedUser = envValue("ADMIN_USERNAME");
+  const expectedPass = envValue("ADMIN_PASSWORD");
+  const expectedSecret = envValue("ADMIN_SESSION_SECRET");
 
-  if (!expectedUser || !expectedPass) {
-    return NextResponse.json({ ok: false, message: "Admin credentials are not configured" }, { status: 500 });
+  if (!expectedUser || !expectedPass || !expectedSecret) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "في مشكلة في إعدادات السيرفر. تواصل مع الدعم",
+        missing: {
+          adminUsernameConfigured: Boolean(expectedUser),
+          adminPasswordConfigured: Boolean(expectedPass),
+          adminSessionSecretConfigured: Boolean(expectedSecret),
+        },
+      },
+      { status: 500 },
+    );
   }
 
   if (username !== expectedUser || password !== expectedPass) {

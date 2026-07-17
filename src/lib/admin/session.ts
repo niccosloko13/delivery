@@ -13,7 +13,7 @@ type SessionPayload = {
 };
 
 function secret() {
-  const value = process.env.ADMIN_SESSION_SECRET;
+  const value = process.env.ADMIN_SESSION_SECRET?.trim();
   if (!value) {
     if (process.env.NODE_ENV === "production") {
       throw new Error("ADMIN_SESSION_SECRET is required in production");

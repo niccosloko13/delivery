@@ -20,9 +20,10 @@ export default function AdminLoginPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
+    const result = (await response.json().catch(() => null)) as { message?: string } | null;
     setLoading(false);
     if (!response.ok) {
-      setError("بيانات الدخول غير صحيحة");
+      setError(result?.message || "اسم المستخدم أو كلمة السر غلط");
       return;
     }
     router.replace("/admin");
